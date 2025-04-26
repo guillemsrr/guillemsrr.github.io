@@ -3,7 +3,7 @@ import Projects from "@app/(projects)/projects/projects";
 
 export const metadata: Metadata = {
     title: 'Projects',
-    description: 'Featured projects and work',
+    description: 'Featured projects',
 }
 
 export default function ProjectsPage()

@@ -2,8 +2,8 @@
 import About from './about'
 
 export const metadata: Metadata = {
-    title: 'Projects',
-    description: 'Featured projects and work',
+    title: 'About',
+    description: 'Software developer and tech enthusiast',
 }
 
 export default function AboutPage()

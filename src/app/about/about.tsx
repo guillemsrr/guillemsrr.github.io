@@ -1,5 +1,4 @@
-﻿import type {Metadata} from 'next'
-import Image from 'next/image'
+﻿import Image from 'next/image'
 import path from 'path'
 import fs from 'fs'
 import matter from 'gray-matter'
@@ -11,11 +10,6 @@ async function getAboutMdx()
     const fileContent = fs.readFileSync(filePath, 'utf8');
     const {content} = matter(fileContent);
     return content;
-}
-
-export const metadata: Metadata = {
-    title: 'About',
-    description: 'Software developer and tech enthusiast',
 }
 
 export default async function About()
