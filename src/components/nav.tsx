@@ -22,12 +22,12 @@ export function Navbar()
             <nav>
                 <div className="flex">
                     <div className="flex flex-row">
-                        <Link
+                        {/*<Link
                             href="/projects"
                             className="transition-all hover:text-neutral-800 dark:hover:text-neutral-200 flex align-middle relative py-1 px-4 m-1 font-medium capitalize"
                         >
                             Projects
-                        </Link>
+                        </Link>*/}
 
                         <Link
                             href="/professional-experience"
