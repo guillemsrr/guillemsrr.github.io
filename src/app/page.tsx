@@ -7,6 +7,7 @@ export default function MainPage()
     return (
         <div>
             <About/>
+            <div className="mb-32"/>
             <ProfessionalExperience/>
             {/*<Projects/>*/}
         </div>

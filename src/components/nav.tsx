@@ -24,22 +24,22 @@ export function Navbar()
                     <div className="flex flex-row">
                         {/*<Link
                             href="/projects"
-                            className="transition-all hover:text-neutral-800 dark:hover:text-neutral-200 flex align-middle relative py-1 px-4 m-1 font-medium capitalize"
+                            className="transition-all hover:text-neutral-800 dark:hover:text-neutral-200 flex align-middle relative py-1 px-4 m-1 font-medium"
                         >
                             Projects
                         </Link>*/}
 
                         <Link
                             href="/professional-experience"
-                            className="transition-all hover:text-neutral-800 dark:hover:text-neutral-200 flex align-middle relative py-1 px-4 m-1 font-medium capitalize"
+                            className="transition-all hover:text-neutral-800 dark:hover:text-neutral-200 flex align-middle relative py-1 px-4 m-1 font-medium"
                         >
                             Professional Experience
                         </Link>
                         <Link
                             href="/about"
-                            className="transition-all hover:text-neutral-800 dark:hover:text-neutral-200 flex align-middle relative py-1 px-4 m-1 font-medium capitalize"
+                            className="transition-all hover:text-neutral-800 dark:hover:text-neutral-200 flex align-middle relative py-1 px-4 m-1 font-medium"
                         >
-                            About
+                            About me
                         </Link>
                     </div>
                 </div>

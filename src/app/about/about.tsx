@@ -18,9 +18,9 @@ export default async function About()
 
     return (
         <section id="about">
-            <h1 className="text-2xl font-semibold tracking-tighter">
-                About
-            </h1>
+            <h2 className="font-bold text-3xl mb-8 tracking-tighter">
+                About me
+            </h2>
             <div className="prose prose-neutral dark:prose-invert">
                 <div className="flex flex-col md:flex-row gap-8">
                     <Image

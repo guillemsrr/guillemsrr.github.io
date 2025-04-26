@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     },
     description: 'This is my portfolio.',
     icons: {
-        icon: process.env.NODE_ENV === 'production' ? '/guillemsrr.github.io/favicon.ico' : '/favicon.ico',
+        icon: '/favicon.ico',
     },
     openGraph: {
         title: 'My Portfolio',
@@ -51,16 +51,5 @@ export const metadata: Metadata = {
         siteName: 'My Portfolio',
         locale: 'en_US',
         type: 'website',
-    },
-    robots: {
-        index: true,
-        follow: true,
-        googleBot: {
-            index: true,
-            follow: true,
-            'max-video-preview': -1,
-            'max-image-preview': 'large',
-            'max-snippet': -1,
-        },
     },
 }
