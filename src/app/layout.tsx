@@ -21,10 +21,6 @@ export default function RootLayout({
                 montserrat.variable
             )}
         >
-        <head>
-            <link rel="icon" href="/favicon.ico"/>
-            <title>Guillem Serra | Portfolio</title>
-        </head>
         <body className="max-w-4xl mx-auto font-sans">
             <main className="mt-8 flex flex-col w-full">
                 <Header/>
@@ -47,7 +43,7 @@ export const metadata: Metadata = {
     },
     description: 'This is my portfolio.',
     icons: {
-        icon: '/favicon.ico',
+        icon: process.env.NODE_ENV === 'production' ? '/guillemsrr.github.io/favicon.ico' : '/favicon.ico',
     },
     openGraph: {
         title: 'My Portfolio',
