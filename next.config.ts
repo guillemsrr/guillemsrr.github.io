@@ -1,12 +1,13 @@
-﻿const nextConfig = {
-  output: 'export',
-  images: {
-    unoptimized: true,
-  },
-  basePath: process.env.NEXT_PUBLIC_BASE_PATH || '',
-  assetPrefix: process.env.NEXT_PUBLIC_BASE_PATH || '',
-  // Add this to handle trailing slashes
-  trailingSlash: true,
-}
+﻿const repoName = "guillemsrr.github.io"; // <-- CHANGE THIS!
 
-module.exports = nextConfig
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+    output: 'export',
+    basePath: process.env.NODE_ENV === "production" ? `/${repoName}` : '',
+    assetPrefix: process.env.NODE_ENV === "production" ? `/${repoName}/` : '',
+    images: {
+        unoptimized: true,
+    },
+};
+
+module.exports = nextConfig;
