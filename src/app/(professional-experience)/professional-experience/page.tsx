@@ -2,7 +2,7 @@
 import ProfessionalExperience from "@app/(professional-experience)/professional-experience";
 
 export const metadata: Metadata = {
-    title: 'Projects',
+    title: 'Professional Experience',
     description: 'Featured projects and work',
 }
 
