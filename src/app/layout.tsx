@@ -42,6 +42,9 @@ export const metadata: Metadata = {
         template: '%s | Guillem Serra',
     },
     description: 'This is my portfolio.',
+    icons: {
+        icon: '/favicon.ico',
+    },
     openGraph: {
         title: 'My Portfolio',
         description: 'This is my portfolio.',
