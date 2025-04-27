@@ -1,10 +1,12 @@
 ﻿import LinkIcon from './link-icon'
+import Image from "next/image";
 
 export default function ExternalLinks()
 {
     return (
         <div>
-            <ul className="font-sm flex flex-row space-x-5">
+
+            <ul className="font-sm flex flex-col sm:flex-row space-y-5 sm:space-y-0 sm:space-x-5">
                 <li>
                     <a
                         className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
@@ -36,11 +38,16 @@ export default function ExternalLinks()
                         className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
                         rel="noopener noreferrer"
                         target="_blank"
-                        href="https://github.com/guillemsrr/guillemsrr.github.io"
+                        href="https://guillem-serra.itch.io/"
                     >
-                        <LinkIcon
-                            path="M16 18l6-6-6-6M8 6l-6 6 6 6"/>
-                        <p className="ml-2">source</p>
+                        <Image
+                            src="/itchio-textless-black.svg"
+                            alt="Itch.io"
+                            width={24}
+                            height={24}
+                            className="dark:invert transition-all"
+                        />
+                        <p className="ml-2">itch</p>
                     </a>
                 </li>
             </ul>

@@ -4,8 +4,7 @@ import {Navbar} from '@components/nav'
 import Footer from '@components/footer'
 import {Header} from "@app/(header)/header";
 import {montserrat} from '@app/fonts'
-
-const cx = (...classes) => classes.filter(Boolean).join(' ')
+import React from "react";
 
 export default function RootLayout({
                                        children,
@@ -16,12 +15,9 @@ export default function RootLayout({
     return (
         <html
             lang="en"
-            className={cx(
-                'text-black bg-white dark:text-white dark:bg-black',
-                montserrat.variable
-            )}
+            className={`text-black bg-white dark:text-white dark:bg-black ${montserrat.className}`}
         >
-        <body className="max-w-4xl mx-auto font-sans">
+        <body className="mx-8 lg:max-w-4xl lg:mx-auto">
             <main className="mt-8 flex flex-col w-full">
                 <Header/>
                 <Navbar/>
