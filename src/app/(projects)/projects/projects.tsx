@@ -51,10 +51,10 @@ export async function getProjects(): Promise<Project[]>
 function ProjectCard({project}: { project: Project })
 {
     return (
-        <div className="my-4">
+        <div className="my-2">
             <Link
                 href={`/projects/${project.slug}`}
-                className="block hover:shadow-lg transition overflow-hidden rounded-md"
+                className="p-1 block hover:shadow-lg transition overflow-hidden rounded-md"
             >
                 <div className="relative h-52">
                     <Image
@@ -90,7 +90,7 @@ export default async function Projects()
 
     return (
         <div className="container mx-auto max-w-7xl">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-x-6 gap-y-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-x-4 gap-y-6">
                 {projects.map((project) => (
                     <ProjectCard key={project.slug} project={project}/>
                 ))}
