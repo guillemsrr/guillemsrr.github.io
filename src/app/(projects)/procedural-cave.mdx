@@ -1,6 +1,48 @@
 ﻿---
 title: 'Procedural cave generation'
 publishedAt: '2020-04-08'
-description: 'Explore the enduring debate between using spaces and tabs for code indentation, and why this choice matters more than you might think.'
-image: "/images/soliloquy/3P_had_enough.png"
+description: 'Editor to create hexagonal cave levels'
+image: "/images/projects/caves/caves_cover.gif"
+tags: "Unity, Procgen"
 ---
+
+Test with the editor my  procedural generation algorithm, made in C# in Unity.
+
+The original game that uses it is Deep Beneath.
+
+Algorithm process:
+
+Random positions in 2D hexagon grid.
+3D Hexagonal Caves instantiation, walls cutting.
+Graph creation based on hexs (nodes).
+Edges creation (tunnels) based on walls normals and checking intersections.
+Breadth First Search to check if the level is explorable.
+Tunnels instantiation according to edges.
+Props instantiation.
+Rocks instantiation using Poisson-Disc Sampling algorithm.
+Falling Path creation (slightly different algorithm).
+3D assets by Pol Blanes & Adrià Fret.
+
+You can download the project on GitHub.
+
+[GitHub](https://github.com/guillemsrr/Procedural-Caves-Creator)
+
+![basic level](/images/projects/caves/basicLevel.gif)
+![basic level](/images/projects/caves/graph1.gif)
+![basic level](/images/projects/caves/graph-based_level.gif)
+![basic level](/images/projects/caves/hex_caves.gif)
+![basic level](/images/projects/caves/hex_caves_tunnel.gif)
+![basic level](/images/projects/caves/prototype_Floors_Connected_Level.gif)
+![basic level](/images/projects/caves/prototype_level_final.gif)
+![basic level](/images/projects/caves/release_procedural_levels_fast.gif)
+![basic level](/images/projects/caves/camera.gif)
+![basic level](/images/projects/caves/map.gif)
+![basic level](/images/projects/caves/deepBeneath.gif)
+
+<Iframe src="https://itch.io/embed/454730"/>
+
+# Deep Beneath:
+
+[Deep Beneath](https://gamejolt.com/games/DeepBeneath/413693)
+
+<YouTube id="ZuY8PqoaVqQ?si=OrSgVeyxT7FL_G13"/>

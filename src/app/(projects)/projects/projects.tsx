@@ -3,6 +3,7 @@ import Image from 'next/image'
 import path from "path";
 import fs from "fs";
 import matter from "gray-matter";
+import {Tag} from "@app/(professional-experience)/tag";
 
 export interface Project
 {
@@ -11,6 +12,7 @@ export interface Project
     description: string;
     publishedAt?: string;
     image: string;
+    tags?: string;  // Comma-separated string of tags
 }
 
 export async function getProjects(): Promise<Project[]>
@@ -30,9 +32,10 @@ export async function getProjects(): Promise<Project[]>
                 return {
                     slug: file.replace(/\.mdx$/, ''),
                     title: data.title,
-                    description: data.summary,
+                    description: data.description,
                     publishedAt: data.publishedAt,
-                    image: data.image
+                    image: data.image,
+                    tags: data.tags
                 };
             })
     );
@@ -48,19 +51,32 @@ export async function getProjects(): Promise<Project[]>
 function ProjectCard({project}: { project: Project })
 {
     return (
-        <div className="relative">
-            <Link href={`/projects/${project.slug}`}
-                  className="block p-4 border rounded-lg hover:shadow-lg transition-shadow">
-                <div className="relative h-48 mb-4">
+        <div>
+            <Link
+                href={`/projects/${project.slug}`}
+                className="block hover:shadow-lg transition"
+            >
+                <div className="relative h-52 overflow-hidden">
                     <Image
                         src={project.image}
                         alt={project.title}
                         fill
-                        className="object-cover rounded-lg"
+                        className="object-cover"
                     />
                 </div>
-                <h2 className="text-xl font-bold mb-2">{project.title}</h2>
-                <p className="text-gray-600 dark:text-gray-300">{project.description}</p>
+
+                <h2 className="mt-2 text-xl">{project.title}</h2>
+                <p className="mt-2 text-m">{project.description}</p>
+
+                {project.tags && (
+                    <div className="flex flex-wrap gap-2 mt-2">
+                        {project.tags.split(',').map((tag, index) => (
+                            <Tag key={index}>
+                                {tag.trim()}
+                            </Tag>
+                        ))}
+                    </div>
+                )}
             </Link>
         </div>
     );
@@ -71,10 +87,12 @@ export default async function Projects()
     const projects = await getProjects();
 
     return (
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 py-8">
-            {projects.map((project) => (
-                <ProjectCard key={project.slug} project={project}/>
-            ))}
+        <div className="container mx-auto max-w-7xl">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-x-6 gap-y-12 py-4">
+                {projects.map((project) => (
+                    <ProjectCard key={project.slug} project={project}/>
+                ))}
+            </div>
         </div>
     );
 }

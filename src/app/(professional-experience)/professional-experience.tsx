@@ -1,12 +1,21 @@
 ﻿import React from 'react';
 import fs from 'fs';
 import path from 'path';
-import {ExperienceMDX} from "@app/(professional-experience)/experience-mdx";
+import matter from "gray-matter";
+import {CustomMDX} from "@components/mdx";
 
-export async function getExperienceMdx()
+async function getExperienceMdx()
 {
     const filePath = path.join(process.cwd(), 'src/app/(professional-experience)/professional-experience.mdx');
-    return fs.readFileSync(filePath, 'utf8');
+
+    if (!fs.existsSync(filePath))
+    {
+        throw new Error(`MDX file not found: ${filePath}`);
+    }
+    
+    const rawSource = await fs.promises.readFile(filePath, 'utf8');
+    const {content} = matter(rawSource);
+    return content;
 }
 
 export default async function ProfessionalExperience()
@@ -19,7 +28,7 @@ export default async function ProfessionalExperience()
                 Professional Experience
             </h2>
             <div className="prose prose-neutral dark:prose-invert">
-                <ExperienceMDX source={content}/>
+                <CustomMDX source={content}/>
             </div>
         </section>
     );

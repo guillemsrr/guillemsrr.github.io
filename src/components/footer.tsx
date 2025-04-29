@@ -18,7 +18,7 @@ export default function Footer()
 
                     <LinkIcon
                         path="M16 18l6-6-6-6M8 6l-6 6 6 6"/>
-                    <p className="ml-2">source</p>
+                    <p className="font-sm ml-2">source</p>
                 </a>
             </div>
         </footer>

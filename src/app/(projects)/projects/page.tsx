@@ -13,11 +13,7 @@ export default function ProjectsPage()
             <h1 className="text-2xl font-semibold tracking-tighter">
                 Projects
             </h1>
-            <div className="prose prose-neutral dark:prose-invert">
-                <div className="flex flex-col gap-8">
-                    <Projects/>
-                </div>
-            </div>
+            <Projects/>
         </section>
     )
 }

@@ -4,8 +4,7 @@ import Image from "next/image";
 export default function ExternalLinks()
 {
     return (
-        <div>
-
+        <div className={""}>
             <ul className="font-sm flex flex-col sm:flex-row space-y-5 sm:space-y-0 sm:space-x-5">
                 <li>
                     <a
