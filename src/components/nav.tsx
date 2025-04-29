@@ -18,32 +18,31 @@ export function Navbar()
     }
 
     return (
-        <div className={'bg-neutral-60 dark:bg-neutral-900'}>
-            <nav>
-                <div className="flex">
-                    <div className="flex flex-row">
-                        {/*<Link
-                            href="/projects"
-                            className="transition-all hover:text-neutral-800 dark:hover:text-neutral-200 flex align-middle relative py-1 px-4 m-1 font-medium"
-                        >
-                            Projects
-                        </Link>*/}
+        <nav className={"md:mx-4"}>
+            <div className="flex">
+                <div
+                    className="flex flex-row transition-all  font-medium">
+                    <Link
+                        href="/projects"
+                        className="flex align-middle relative py-1 px-4 m-1"
+                    >
+                        Projects
+                    </Link>
 
-                        <Link
-                            href="/professional-experience"
-                            className="transition-all hover:text-neutral-800 dark:hover:text-neutral-200 flex align-middle relative py-1 px-4 m-1 font-medium"
-                        >
-                            Professional Experience
-                        </Link>
-                        <Link
-                            href="/about"
-                            className="transition-all hover:text-neutral-800 dark:hover:text-neutral-200 flex align-middle relative py-1 px-4 m-1 font-medium"
-                        >
-                            About me
-                        </Link>
-                    </div>
+                    <Link
+                        href="/professional-experience"
+                        className="flex align-middle relative py-1 px-4 m-1"
+                    >
+                        Professional Experience
+                    </Link>
+                    <Link
+                        href="/about"
+                        className="flex align-middle relative py-1 px-4 m-1"
+                    >
+                        About me
+                    </Link>
                 </div>
-            </nav>
-        </div>
+            </div>
+        </nav>
     )
 }

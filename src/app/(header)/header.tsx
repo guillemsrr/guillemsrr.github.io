@@ -6,9 +6,9 @@ export function Header()
 {
     return (
         <header className="mb-8 flex items-start justify-between">
-            <div>
+            <div className={"mx-4"}>
                 <Link href="/" className="font-medium">
-                    Guillem Serra
+                    Guillem Serra  | Portfolio
                 </Link>
                 <h1>
                     {"{"} video games developer {"}"}

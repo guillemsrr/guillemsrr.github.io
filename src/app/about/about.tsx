@@ -7,9 +7,14 @@ import {CustomMDX} from "@components/mdx";
 async function getAboutMdx()
 {
     const filePath = path.join(process.cwd(), 'src/app/about/about.mdx');
-    const fileContent = fs.readFileSync(filePath, 'utf8');
-    //const {content} = matter(fileContent);
-    return fileContent;
+    if (!fs.existsSync(filePath))
+    {
+        throw new Error(`MDX file not found: ${filePath}`);
+    }
+
+    const rawSource = await fs.promises.readFile(filePath, 'utf8');
+    const {content} = matter(rawSource);
+    return content;
 }
 
 export default async function About()
@@ -17,29 +22,40 @@ export default async function About()
     const aboutMdx = await getAboutMdx();
 
     return (
-        <section id="about">
-            <h2 className="font-bold text-3xl mb-8 tracking-tighter">
-                About me
-            </h2>
-            <div className="prose prose-neutral">
-                <div className="flex flex-col md:flex-row gap-8">
-
-                    <Image
-                        alt="Guillem Serra"
-                        src="/images/foto_Guillem.png"
-                        width={250}
-                        height={100}
-                        className="flex-grow object-cover"
-                    />
-                    <div className="flex flex-col gap-6 flex-shrink">
-                        <p className="mb-4">{`
-I’m a programmer with 5+ years of experience using Unreal Engine (C++) and Unity, on projects ranging from indie solo development to collaborative studio teams. Committed to writing scalable & efficient code focusing on establishing design principles and building robust software architectures. I’m always looking to expand my knowledge and skills while creating meaningful and impactful experiences.                   
-                        `}</p>
+        <div className="mx-0">
+            <section id="about">
+                <h2 className="font-bold text-3xl mb-8 tracking-tighter">
+                    About Me
+                </h2>
+                <div className="prose prose-neutral dark:prose-invert">
+                    <div className="flex flex-col md:flex-row gap-8">
+                        <Image
+                            alt="Guillem Serra"
+                            src="/images/foto_Guillem.png"
+                            width={250}
+                            height={100}
+                            className="flex-grow object-cover rounded-4xl shadow"
+                        />
+                        <div className="flex flex-col gap-4 flex-shrink">
+                            <p>
+                                I’m Guillem Serra, a video game programmer with over 5 years of experience using Unreal
+                                Engine (C++) and Unity. My work spans solo indie projects to collaborative studio teams.
+                            </p>
+                            <p>
+                                I care deeply about building reliable, maintainable software that enables creativity —
+                                whether through gameplay mechanics, editor extensions, or procedural systems. I strive
+                                to bridge technical excellence with design intent, bringing ideas to life in ways that
+                                are elegant, efficient, and expressive.
+                            </p>
+                            <p>
+                                I’m driven by curiosity and constant learning, and I thrive in environments where
+                                technical challenge meets artistic ambition.
+                            </p>
+                        </div>
                     </div>
+                    <CustomMDX source={aboutMdx}/>
                 </div>
-                <CustomMDX source={aboutMdx}/>
-            </div>
-        </section>
-
-    )
+            </section>
+        </div>
+    );
 }

@@ -1,8 +1,36 @@
-﻿import {CustomMDX, loadProjectMdx} from '@components/mdx'
+﻿import {CustomMDX} from '@components/mdx'
 import {notFound} from 'next/navigation'
-import {getProjects} from "@app/(projects)/projects/projects";
+import {getProjects, Project} from "@app/(projects)/projects/projects";
+import path from "path";
+import fs from "fs";
+import matter from "gray-matter";
+import Image from "next/image";
+import {Tag} from "@app/(professional-experience)/tag";
 
-export default async function Project({params}: { params: Promise<{ project: string }> })
+async function loadProjectMdx(slug: string)
+{
+    const filePath = path.join(
+        process.cwd(),
+        'src',
+        'app',
+        '(projects)',
+        `${slug}.mdx`
+    );
+
+    if (!fs.existsSync(filePath))
+    {
+        throw new Error(`MDX file not found: ${filePath}`);
+    }
+
+    const rawSource = await fs.promises.readFile(filePath, 'utf8');
+    const {data, content} = matter(rawSource);
+    return {
+        project: data as Project,
+        content,
+    };
+}
+
+export default async function ProjectPage({params}: { params: Promise<{ project: string }> })
 {
     const {project: slug} = await params;
     const projects = await getProjects();
@@ -10,13 +38,33 @@ export default async function Project({params}: { params: Promise<{ project: str
 
     if (!meta) notFound();
 
-    const {content, frontmatter} = await loadProjectMdx(slug);
+    const {content, project} = await loadProjectMdx(slug);
 
     return (
         <section>
-            <h1>{frontmatter.title}</h1>
-            <p>{frontmatter.summary}</p>
-            <CustomMDX source={content}/>
+            <h1 className="font-bold text-4xl">
+                {project.title}
+            </h1>
+            <div className="flex flex-wrap gap-2 mt-4">
+                {project.tags?.split(',').map((tag, index) => (
+                    <Tag key={index}>
+                        {tag.trim()}
+                    </Tag>
+                ))}
+            </div>
+            <div className="mt-4 mb-4 relative h-48">
+                <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    className="object-cover"
+                />
+            </div>
+            <p>{project.description}</p>
+            
+            <div className="prose prose-neutral">
+                <CustomMDX source={content}/>
+            </div>
         </section>
     );
 }
