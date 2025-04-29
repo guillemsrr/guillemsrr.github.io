@@ -19,26 +19,12 @@
     --sh-entity: #e25a1c;
 }
 
-@media (prefers-color-scheme: dark)
-{
-    :root
-    {
-        --sh-class: #4c97f8;
-        --sh-identifier: white;
-        --sh-keyword: #f47067;
-        --sh-string: #0fa295;
-    }
-
-    html
-    {
-        color-scheme: dark;
-    }
-}
-
 html
 {
     min-width: 360px;
 }
+
+@custom-variant dark (&:where(.dark, .dark *));
 
 .prose .anchor
 {
@@ -53,7 +39,7 @@ html
 
 a:hover
 {
-    @apply text-neutral-800 dark:text-neutral-300;
+    @apply bg-neutral-200 dark:bg-neutral-700;
 }
 
 .anchor:hover

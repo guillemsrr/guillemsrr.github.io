@@ -5,10 +5,11 @@ export default function ExternalLinks()
 {
     return (
         <div className={""}>
-            <ul className="font-sm flex flex-col sm:flex-row space-y-5 sm:space-y-0 sm:space-x-5">
+            <ul className="font-sm flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-2">
                 <li>
+
                     <a
-                        className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
+                        className="flex items-center transition-all"
                         rel="noopener noreferrer"
                         target="_blank"
                         href="https://github.com/guillemsrr"
@@ -21,7 +22,7 @@ export default function ExternalLinks()
                 </li>
                 <li>
                     <a
-                        className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
+                        className="flex items-center transition-all"
                         rel="noopener noreferrer"
                         target="_blank"
                         href="https://www.linkedin.com/in/guillemserralorenz/"
@@ -34,7 +35,7 @@ export default function ExternalLinks()
                 </li>
                 <li>
                     <a
-                        className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
+                        className="flex items-center transition-all"
                         rel="noopener noreferrer"
                         target="_blank"
                         href="https://guillem-serra.itch.io/"

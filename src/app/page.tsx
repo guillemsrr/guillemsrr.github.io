@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import Projects from "@app/(projects)/projects/projects";
 
 export default function MainPage()
@@ -17,24 +18,38 @@ export default function MainPage()
 
                 <div className="max-w-xl space-y-4">
                     <h1 className="text-3xl font-bold leading-snug">
-                        Hi! I'm Guillem Serra, video game programmer with 5+ years of experience in Unreal C++, and Unity.
+                        Hi! I'm Guillem Serra, a video game programmer with 5+ years of experience in Unreal C++, and
+                        Unity.
                     </h1>
                     <p className="">
                         I specialize in scalable code, clean architecture, and bringing ideas to life through gameplay
-                        systems and tools. 
+                        systems and tools.
                     </p>
                     <p className="mt-4">
                         I'm always open to discussing creative ideas, meaningful projects, or collaborative
                         opportunities.
                         Feel free to reach out!
                     </p>
-                    <p className="mt-8">
-                        Check out my projects if you're interested! They range from simple junior games to more complex projects. (Work in progress)
-                    </p>
+                        
+                    <div className={"py-4"}>
+                        <Link
+                            href="mailto:guillemserra.dev@gmail.com"
+                            className="inline-block px-4 py-2 rounded-lg bg-gray-600 text-white dark:hover:bg-gray-700 transition-colors"
+                        >
+                            Email me
+                        </Link>
+                    </div>
                 </div>
             </div>
 
             <div className="mt-16">
+                <p className="mt-8">
+                    Check out my projects if you're interested!
+                </p>
+                <p className="mt-4">
+                    They range from simple junior games to more complex
+                    projects. (Work in progress)
+                </p>
                 <Projects/>
             </div>
         </div>
