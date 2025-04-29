@@ -1,39 +1,74 @@
 import 'src/global.css'
 import type {Metadata} from 'next'
-import {Navbar} from '@components/nav'
-import Footer from '@components/footer'
-import {Header} from "@app/(header)/header";
 import {montserrat} from '@app/fonts'
-import React from "react";
+import React, {ReactNode} from "react";
+import Providers from "@components/providers";
+import Script from "next/script";
+import {Header} from "@app/(header)/header";
+import {Navbar} from "@components/nav";
+import Footer from "@components/footer";
 
-export default function RootLayout({
-                                       children,
-                                   }: {
-    children: React.ReactNode
-})
+function setInitialColorMode()
+{
+    const stored = localStorage.getItem('theme');
+    if (stored === 'light' || stored === 'dark')
+    {
+        document.documentElement.classList.add(stored);
+        return;
+    }
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches)
+    {
+        document.documentElement.classList.add('dark');
+    }
+    else
+    {
+        document.documentElement.classList.add('light');
+    }
+}
+
+export default function RootLayout({children}: { children: React.ReactNode })
 {
     return (
-        <html
-            lang="en"
-            className={`text-black bg-white dark:text-white dark:bg-black ${montserrat.className}`}
-        >
-        <body className="mx-4 md:mx-8 lg:max-w-6xl lg:mx-auto">
-            <main className="mt-4 md:mt-8 flex flex-col">
-                <Header/>
-                <div className={'bg-neutral-60 dark:bg-neutral-900'}>
-                    <Navbar/>
-                </div>
-                <div className={'bg-neutral-50 dark:bg-neutral-800'}>
-                    <div className="mx-4 md:mx-8 my-4 md:my-8">
-                        {children}
-                    </div>
-                </div>
-                <Footer/>
-            </main>
+        <html lang="en" className={montserrat.className}>
+        <head>
+            {/* Runs *before* React hydration */}
+            <Script
+                id="theme-init"
+                strategy="beforeInteractive"
+                dangerouslySetInnerHTML={{
+                    __html: `(${setInitialColorMode.toString()})();`,
+                }}
+            />
+        </head>
+        <body className="text-black bg-white dark:text-white dark:bg-black mx-4 md:mx-8 lg:max-w-6xl lg:mx-auto">
+            <Providers>
+                <Structure>
+                    {children}
+                </Structure>
+            </Providers>
         </body>
         </html>
-    )
+    );
 }
+
+function Structure({children}: { children: ReactNode })
+{
+    return (
+        <main className="mt-4 md:mt-8 flex flex-col">
+            <Header/>
+            <div className={'bg-neutral-60 dark:bg-neutral-900'}>
+                <Navbar/>
+            </div>
+            <div className={'bg-neutral-50 dark:bg-neutral-800'}>
+                <div className="mx-4 md:mx-8 my-4 md:my-8">
+                    {children}
+                </div>
+            </div>
+            <Footer/>
+        </main>
+    );
+}
+
 export const metadata: Metadata = {
     title: {
         default: 'Guillem Serra | Portfolio',
