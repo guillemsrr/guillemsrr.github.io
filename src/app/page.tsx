@@ -34,7 +34,7 @@ export default function MainPage()
                     <div className={"py-4"}>
                         <Link
                             href="mailto:guillemserra.dev@gmail.com"
-                            className="inline-block px-4 py-2 rounded-lg bg-gray-600 text-white dark:hover:bg-gray-700 transition-colors"
+                            className="email-button inline-block px-4 py-2 rounded-lg bg-gray-600 text-white transition-colors"
                         >
                             Email me
                         </Link>

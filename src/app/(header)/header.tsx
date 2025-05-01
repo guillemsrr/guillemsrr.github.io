@@ -9,7 +9,7 @@ export function Header()
     return (
         <header className="mb-8 flex items-start justify-between">
             <div className={"mx-4"}>
-                <Link href="/" className="font-medium">
+                <Link href="/" className="font-bold">
                     Guillem Serra | Portfolio
                 </Link>
                 <h1>
