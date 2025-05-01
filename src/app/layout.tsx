@@ -31,7 +31,6 @@ export default function RootLayout({children}: { children: React.ReactNode })
     return (
         <html lang="en" className={montserrat.className}>
         <head>
-            {/* Runs *before* React hydration */}
             <Script
                 id="theme-init"
                 strategy="beforeInteractive"
@@ -56,7 +55,7 @@ function Structure({children}: { children: ReactNode })
     return (
         <main className="mt-4 md:mt-8 flex flex-col">
             <Header/>
-            <div className={'bg-neutral-60 dark:bg-neutral-900'}>
+            <div className={'bg-neutral-100 dark:bg-neutral-900'}>
                 <Navbar/>
             </div>
             <div className={'bg-neutral-50 dark:bg-neutral-800'}>

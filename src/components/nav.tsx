@@ -21,23 +21,23 @@ export function Navbar()
         <nav className={"md:mx-4"}>
             <div className="flex">
                 <div
-                    className="flex flex-row transition-all  font-medium">
+                    className="flex flex-row transition-all my-2 font-medium">
                     <Link
                         href="/projects"
-                        className="flex align-middle relative py-1 px-4 m-1"
+                        className="flex align-middle relative px-4 m-1"
                     >
                         Projects
                     </Link>
 
                     <Link
                         href="/professional-experience"
-                        className="flex align-middle relative py-1 px-4 m-1"
+                        className="flex align-middle relative px-4 m-1"
                     >
                         Professional Experience
                     </Link>
                     <Link
                         href="/about"
-                        className="flex align-middle relative py-1 px-4 m-1"
+                        className="flex align-middle relative px-4 m-1"
                     >
                         About me
                     </Link>
