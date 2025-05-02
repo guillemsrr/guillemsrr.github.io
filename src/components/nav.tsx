@@ -18,31 +18,29 @@ export function Navbar()
     }
 
     return (
-        <nav className={"md:mx-4"}>
-            <div className="flex">
-                <div
-                    className="flex flex-row transition-all my-2 font-medium">
+        <nav className="">
+                <div className="flex flex-row items-stretch font-medium">
                     <Link
                         href="/projects"
-                        className="flex align-middle relative px-4 m-1"
+                        className="flex items-center h-full p-4 general-anchor"
                     >
                         Projects
                     </Link>
 
                     <Link
                         href="/professional-experience"
-                        className="flex align-middle relative px-4 m-1"
+                        className="flex items-center h-full px-4 p-4 general-anchor"
                     >
                         Professional Experience
                     </Link>
+
                     <Link
                         href="/about"
-                        className="flex align-middle relative px-4 m-1"
+                        className="flex items-center h-full px-4 p-4 general-anchor"
                     >
                         About me
                     </Link>
                 </div>
-            </div>
         </nav>
     )
 }
