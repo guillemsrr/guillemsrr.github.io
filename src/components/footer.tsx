@@ -10,7 +10,7 @@ export default function Footer()
                 </p>
                 
                 <a
-                    className="flex hover:text-neutral-800 dark:hover:text-neutral-100"
+                    className="flex px-1 rounded-lg general-anchor"
                     rel="noopener noreferrer"
                     target="_blank"
                     href="https://github.com/guillemsrr/guillemsrr.github.io"

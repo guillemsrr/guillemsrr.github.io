@@ -51,7 +51,7 @@ export async function getProjects(): Promise<Project[]>
 function ProjectCard({project}: { project: Project })
 {
     return (
-        <div className="my-2">
+        <div className="mb-1">
             <Link
                 href={`/projects/${project.slug}`}
                 className="p-1 block hover:shadow-lg transition overflow-hidden rounded-md general-anchor"

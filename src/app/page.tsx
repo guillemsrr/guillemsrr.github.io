@@ -30,7 +30,7 @@ export default function MainPage()
                         opportunities.
                         Feel free to reach out!
                     </p>
-                        
+
                     <div className={"py-4"}>
                         <Link
                             href="mailto:guillemserra.dev@gmail.com"
@@ -46,7 +46,7 @@ export default function MainPage()
                 <p className="mt-8">
                     Check out my projects if you're interested!
                 </p>
-                <p className="mt-4">
+                <p className="my-4">
                     They range from simple junior games to more complex
                     projects. (Work in progress)
                 </p>
