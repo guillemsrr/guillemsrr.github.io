@@ -54,7 +54,7 @@ function ProjectCard({project}: { project: Project })
         <div className="my-2">
             <Link
                 href={`/projects/${project.slug}`}
-                className="p-1 block hover:shadow-lg transition overflow-hidden rounded-md"
+                className="p-1 block hover:shadow-lg transition overflow-hidden rounded-md general-anchor"
             >
                 <div className="relative h-52">
                     <Image

@@ -7,9 +7,8 @@ export default function ExternalLinks()
         <div className={""}>
             <ul className="font-sm flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-2">
                 <li>
-
                     <a
-                        className="flex items-center transition-all"
+                        className="flex items-center p-2 rounded-lg general-anchor"
                         rel="noopener noreferrer"
                         target="_blank"
                         href="https://github.com/guillemsrr"
@@ -22,7 +21,7 @@ export default function ExternalLinks()
                 </li>
                 <li>
                     <a
-                        className="flex items-center transition-all"
+                        className="flex items-center p-2 rounded-lg general-anchor"
                         rel="noopener noreferrer"
                         target="_blank"
                         href="https://www.linkedin.com/in/guillemserralorenz/"
@@ -35,7 +34,7 @@ export default function ExternalLinks()
                 </li>
                 <li>
                     <a
-                        className="flex items-center transition-all"
+                        className="flex items-center p-2 rounded-lg general-anchor"
                         rel="noopener noreferrer"
                         target="_blank"
                         href="https://guillem-serra.itch.io/"
