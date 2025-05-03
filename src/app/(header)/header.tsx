@@ -7,7 +7,7 @@ import ThemeToggle from "@components/theme-toggle";
 export function Header()
 {
     return (
-        <header className="mb-8 flex items-start justify-between">
+        <header className="flex items-start justify-between">
             <div className={"p-2"}>
                 <Link href="/" className="p-2 font-bold rounded-lg general-anchor">
                     Guillem Serra | Portfolio
