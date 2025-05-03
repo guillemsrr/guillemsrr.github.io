@@ -10,9 +10,9 @@ export default function ProjectsPage()
 {
     return (
         <section>
-            <h1 className="text-2xl font-semibold tracking-tighter">
+            <h2 className="font-bold text-3xl mb-8 tracking-tighter">
                 Projects
-            </h1>
+            </h2>
             <Projects/>
         </section>
     )
