@@ -55,10 +55,10 @@ function Structure({children}: { children: ReactNode })
     return (
         <main className="mt-4 md:mt-8 flex flex-col">
             <Header/>
-            <div className={'bg-neutral-100 dark:bg-neutral-900'}>
+            <div className={'bg-neutral-200 dark:bg-neutral-900'}>
                 <Navbar/>
             </div>
-            <div className={'bg-neutral-50 dark:bg-neutral-800'}>
+            <div className={'bg-neutral-100 dark:bg-neutral-800'}>
                 <div className="mx-4 md:mx-8 my-4 md:my-8">
                     {children}
                 </div>

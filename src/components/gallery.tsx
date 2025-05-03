@@ -4,23 +4,39 @@ import Lightbox from 'yet-another-react-lightbox';
 import 'yet-another-react-lightbox/styles.css';
 import {useState} from 'react';
 
-export default function Gallery({images}: { images: { src: string; alt?: string }[] })
+export default function Gallery({
+                                    images,
+                                    width,
+                                    compress,
+                                }: {
+    images: { src: string; alt?: string }[];
+    width?: string;
+    compress?: boolean;
+})
 {
     const [imageIndex, setImageIndex] = useState<number>(-1);
 
     return (
         <>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            <div
+                className={
+                    compress
+                        ? 'flex flex-wrap justify-center gap-4'
+                        : 'grid grid-cols-2 md:grid-cols-3 gap-4'
+                }
+            >
                 {images.map((img, idx) => (
                     <img
                         key={idx}
                         src={img.src}
                         alt={img.alt}
+                        width={width ?? '100%'}
+                        height={'auto'}
                         onClick={() =>
                         {
                             setImageIndex(idx); // Set the clicked image index
                         }}
-                        className="cursor-pointer w-full h-auto"
+                        className="cursor-pointer"
                     />
                 ))}
             </div>
