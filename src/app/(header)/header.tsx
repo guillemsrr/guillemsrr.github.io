@@ -12,7 +12,7 @@ export function Header()
                 <Link href="/" className="p-2 font-bold rounded-lg general-anchor">
                     Guillem Serra | Portfolio
                 </Link>
-                <h1 className={"px-2"}>
+                <h1 className={"text-sm md:text-md px-2"}>
                     {"{"} video games developer {"}"}
                 </h1>
             </div>
