@@ -1,11 +1,5 @@
 @import 'tailwindcss';
 
-::selection
-{
-    background-color: #065f46;
-    color: #fefefe;
-}
-
 :root
 {
     --sh-class: #2d5e9d;
@@ -22,6 +16,18 @@
 html
 {
     min-width: 360px;
+}
+
+::selection
+{
+    background-color: #065f46;
+    color: #fefefe;
+}
+
+.dark ::selection
+{
+    background-color: #81e6d9;
+    color: #1a202c;
 }
 
 @custom-variant dark (&:where(.dark, .dark *));
