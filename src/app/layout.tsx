@@ -29,7 +29,7 @@ function setInitialColorMode()
 export default function RootLayout({children}: { children: React.ReactNode })
 {
     return (
-        <html lang="en" className={montserrat.className}>
+        <html lang="en" className={montserrat.className} suppressHydrationWarning>
         <head>
             <Script
                 id="theme-init"

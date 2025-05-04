@@ -20,6 +20,7 @@
     "postcss": "^8.5.3",
     "react": "19.1.0",
     "react-dom": "19.1.0",
+    "react-markdown": "^10.1.0",
     "tailwindcss": "4.1.4",
     "typescript": "5.8.3",
     "yet-another-react-lightbox": "^3.23.0"

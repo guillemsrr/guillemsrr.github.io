@@ -22,7 +22,7 @@ export function Navbar()
                 <div className="flex flex-row items-stretch font-medium">
                     <Link
                         href="/projects"
-                        className="flex items-center h-full p-2 md:p-4 general-anchor"
+                        className="flex items-center h-full p-2 md:p-4 general-anchor !hover:bg-red-400"
                     >
                         Projects
                     </Link>
