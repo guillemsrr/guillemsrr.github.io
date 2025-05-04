@@ -7,6 +7,7 @@ import Gallery from './gallery';
 import Iframe from "@components/frame";
 import YouTube from "@components/video-youtube";
 import {Tag} from "@app/(professional-experience)/tag";
+import LocalizedMDX from "@components/localized-mdx";
 
 const mdxComponents: MDXComponents = {
     img: (props) => <img {...props} loading="lazy" className={props.className} alt={"image"}/>,
@@ -32,7 +33,8 @@ const mdxComponents: MDXComponents = {
     Gallery,
     Iframe,
     YouTube,
-    Tag
+    Tag,
+    LocalizedMDX
 }
 
 export function CustomMDX({

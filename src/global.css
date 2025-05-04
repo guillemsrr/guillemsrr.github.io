@@ -2,7 +2,7 @@
 
 ::selection
 {
-    background-color: #47a3f3;
+    background-color: #065f46;
     color: #fefefe;
 }
 
@@ -39,7 +39,7 @@ html
 
 a.general-anchor:hover
 {
-    @apply bg-neutral-200 dark:bg-neutral-700 transition-colors;
+    @apply bg-neutral-300 dark:bg-neutral-700 transition-colors;
 }
 
 button.general-button:hover
@@ -54,7 +54,12 @@ button.general-button:hover
 
 .prose a
 {
-    @apply underline transition-all decoration-neutral-400 dark:decoration-neutral-600 underline-offset-2 decoration-[0.1em];
+    @apply underline transition-all decoration-neutral-400 dark:decoration-neutral-600 underline-offset-2 decoration-[0.1em] cursor-pointer;
+}
+
+.button
+{
+    @apply cursor-pointer;
 }
 
 .prose .anchor:after

@@ -32,6 +32,7 @@ export default function Gallery({
                         alt={img.alt}
                         width={width ?? '100%'}
                         height={'auto'}
+                        loading="lazy"
                         onClick={() =>
                         {
                             setImageIndex(idx); // Set the clicked image index
@@ -54,15 +55,27 @@ export default function Gallery({
                     },
                 }}
                 render={{
-                    slide: ({slide}) => (
-                        <div className="flex justify-center items-center max-w-full max-h-full">
-                            <img
-                                src={slide.src}
-                                alt={slide.alt}
-                                className="max-w-full max-h-[80vh] object-contain"
-                            />
-                        </div>
-                    ),
+                    slide: ({slide}) =>
+                    {
+                        const [loaded, setLoaded] = useState(false);
+
+                        return (
+                            <div className="flex justify-center items-center max-w-full max-h-full relative">
+                                {!loaded && (
+                                    <div
+                                        className="absolute inset-0 flex items-center justify-center bg-black/70 text-white text-sm">
+                                        Loading...
+                                    </div>
+                                )}
+                                <img
+                                    src={slide.src}
+                                    alt={slide.alt}
+                                    className="max-w-full max-h-[80vh] object-contain transition-opacity duration-500"
+                                    onLoad={() => setLoaded(true)}
+                                />
+                            </div>
+                        );
+                    },
                     slideFooter: () => (
                         <div
                             style={{
