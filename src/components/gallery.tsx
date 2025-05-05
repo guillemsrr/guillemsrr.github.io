@@ -3,11 +3,12 @@
 import Lightbox from 'yet-another-react-lightbox';
 import 'yet-another-react-lightbox/styles.css';
 import {useState} from 'react';
+import Image from 'next-export-optimize-images/image';
 
 export default function Gallery({
                                     images,
                                     width,
-                                    compress,
+                                    compress
                                 }: {
     images: { src: string; alt?: string }[];
     width?: string;
@@ -26,19 +27,21 @@ export default function Gallery({
                 }
             >
                 {images.map((img, idx) => (
-                    <img
-                        key={idx}
-                        src={img.src}
-                        alt={img.alt}
-                        width={width ?? '100%'}
-                        height={'auto'}
-                        loading="lazy"
-                        onClick={() =>
-                        {
-                            setImageIndex(idx); // Set the clicked image index
-                        }}
-                        className="cursor-pointer"
-                    />
+                    <div className={width ?? 'w-full'} key={idx}
+                    >
+                        <Image
+                            src={img.src}
+                            alt={img.alt ?? 'image'}
+                            width={400}
+                            height={300}
+                            loading="lazy"
+                            onClick={() =>
+                            {
+                                setImageIndex(idx); // Set the clicked image index
+                            }}
+                            className="cursor-pointer"
+                        />
+                    </div>
                 ))}
             </div>
 
@@ -52,7 +55,7 @@ export default function Gallery({
                     view: ({index}) =>
                     {
                         setImageIndex(index); // Use the latest index from the event to set the imageIndex
-                    },
+                    }
                 }}
                 render={{
                     slide: ({slide}) =>
@@ -60,17 +63,21 @@ export default function Gallery({
                         const [loaded, setLoaded] = useState(false);
 
                         return (
-                            <div className="flex justify-center items-center max-w-full max-h-full relative">
+                            <div className="relative w-full h-[80vh] flex items-center justify-center">
                                 {!loaded && (
                                     <div
                                         className="absolute inset-0 flex items-center justify-center bg-black/70 text-white text-sm">
                                         Loading...
                                     </div>
                                 )}
-                                <img
+                                <Image
                                     src={slide.src}
-                                    alt={slide.alt}
-                                    className="max-w-full max-h-[80vh] object-contain transition-opacity duration-500"
+                                    alt={slide.alt ?? 'image'}
+                                    fill
+                                    style={{objectFit: 'contain'}}
+                                    className={`transition-opacity duration-500 ${
+                                        loaded ? 'opacity-100' : 'opacity-0'
+                                    }`}
                                     onLoad={() => setLoaded(true)}
                                 />
                             </div>
@@ -87,12 +94,12 @@ export default function Gallery({
                                 color: 'white',
                                 padding: '0.5rem 1rem',
                                 borderRadius: '0.375rem',
-                                fontSize: '0.875rem',
+                                fontSize: '0.875rem'
                             }}
                         >
                             {imageIndex + 1} / {images.length} {/* Show current/max */}
                         </div>
-                    ),
+                    )
                 }}
             />
         </>

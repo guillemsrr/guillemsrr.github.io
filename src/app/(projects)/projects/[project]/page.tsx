@@ -4,7 +4,7 @@ import {getProjects, Project} from "@app/(projects)/projects/projects";
 import path from "path";
 import fs from "fs";
 import matter from "gray-matter";
-import Image from "next/image";
+import Image from "next-export-optimize-images/image";
 import {Tag} from "@app/(professional-experience)/tag";
 
 async function loadProjectMdx(slug: string)

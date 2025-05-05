@@ -1,4 +1,4 @@
-﻿import Image from 'next/image'
+﻿import Image from 'next-export-optimize-images/image'
 import path from 'path'
 import fs from 'fs'
 import matter from 'gray-matter'
@@ -29,13 +29,15 @@ export default async function About()
                 </h2>
                 <div className="prose prose-neutral dark:prose-invert">
                     <div className="flex flex-col md:flex-row gap-8">
-                        <Image
-                            alt="Guillem Serra"
-                            src="/images/foto_Guillem.png"
-                            width={250}
-                            height={100}
-                            className="flex-grow object-cover rounded-4xl shadow"
-                        />
+                        <div className="relative w-full md:w-2/3 aspect-square">
+                            <Image
+                                src="/images/foto_Guillem.png"
+                                alt="Guillem Serra"
+                                fill
+                                loading="lazy"
+                                className="object-cover rounded-4xl shadow"
+                            />
+                        </div>
                         <div className="flex flex-col gap-4 flex-shrink">
                             <p>
                                 I’m Guillem Serra, a video game programmer with over 5 years of experience using Unreal
