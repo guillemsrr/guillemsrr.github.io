@@ -1,6 +1,6 @@
 import {MDXRemote} from 'next-mdx-remote/rsc';
 import type {MDXComponents} from 'mdx/types';
-import Image, {ImageProps} from 'next-export-optimize-images/image';
+import Image from 'next-export-optimize-images/image';
 import Link from 'next/link';
 import React from 'react';
 import Gallery from './gallery';
@@ -13,7 +13,7 @@ import MDXImage from "@components/mdx-image";
 const mdxComponents: MDXComponents = {
     img: MDXImage,
 
-    Image: (props: ImageProps) => (
+    Image: (props) => (
         <Image
             {...props}
             className={props.className}
