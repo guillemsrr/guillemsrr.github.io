@@ -6,6 +6,9 @@ const nextConfig: NextConfig = {
     trailingSlash: true,
     images: {
         loader: 'default',
+        deviceSizes: [640, 1280],
+        imageSizes: [],
+        formats: ['image/webp'],
     },
 };
 
