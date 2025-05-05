@@ -1,7 +1,4 @@
-﻿/**
- * @type {import('next-export-optimize-images').Config}
- */
-
+﻿/** @type {import('next-export-optimize-images').Config} */
 module.exports = {
   imagesFolderPath: 'public/images',
   exportFolderPath: 'out',
@@ -9,7 +6,10 @@ module.exports = {
 
   widths: [640, 1280],
   formats: ['webp'],
-  imageExtensions: [],
+  imageExtensions: ['jpg', 'jpeg', 'png'],
   skipFormat: [],
   skipFolders: [],
+
+  // This removes the original .png files
+  keepOriginalImages: false,
 };
