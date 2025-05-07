@@ -3,42 +3,14 @@ import type {Metadata} from 'next'
 import {montserrat} from '@app/fonts'
 import React, {ReactNode} from "react";
 import Providers from "@components/providers";
-import Script from "next/script";
 import {Header} from "@app/(header)/header";
 import {Navbar} from "@components/nav";
 import Footer from "@components/footer";
-
-function setInitialColorMode()
-{
-    const stored = localStorage.getItem('theme');
-    if (stored === 'light' || stored === 'dark')
-    {
-        document.documentElement.classList.add(stored);
-        return;
-    }
-    if (window.matchMedia('(prefers-color-scheme: dark)').matches)
-    {
-        document.documentElement.classList.add('dark');
-    }
-    else
-    {
-        document.documentElement.classList.add('light');
-    }
-}
 
 export default function RootLayout({children}: { children: React.ReactNode })
 {
     return (
         <html lang="en" className={montserrat.className} suppressHydrationWarning>
-        <head>
-            <Script
-                id="theme-init"
-                strategy="beforeInteractive"
-                dangerouslySetInnerHTML={{
-                    __html: `(${setInitialColorMode.toString()})();`,
-                }}
-            />
-        </head>
         <body className="text-black bg-white dark:text-white dark:bg-black mx-4 md:mx-8 lg:max-w-6xl lg:mx-auto">
             <Providers>
                 <Structure>
