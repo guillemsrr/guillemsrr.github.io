@@ -1,16 +1,20 @@
 ﻿'use client';
 
-export default function Iframe({src}: { src: string; })
+export default function Iframe({src}: { src: string })
 {
+    const paddingTop = (167 / 552) * 100;
+
     return (
-        <div>
-            <iframe
-                src={src}
-                width={552}
-                height={167}
-                allowFullScreen
+        <div className="w-full max-w-[552px]">
+            <div
+                className="relative w-full"
+                style={{paddingTop: `${paddingTop}%`}}
             >
-            </iframe>
+                <iframe
+                    src={src}
+                    className="absolute top-0 left-0 w-full h-full"
+                />
+            </div>
         </div>
     );
-};
+}
