@@ -13,7 +13,7 @@ export function Header()
                     Guillem Serra | Portfolio
                 </Link>
                 <h1 className={"text-sm md:text-md px-2"}>
-                    {"{"} video games developer {"}"}
+                    {"{"} video games programmer {"}"}
                 </h1>
             </div>
             <div className="flex flex-col items-end">
