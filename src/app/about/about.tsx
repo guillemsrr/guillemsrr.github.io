@@ -27,34 +27,36 @@ export default async function About()
                 <h2 className="font-bold text-3xl mb-8 tracking-tighter">
                     About Me
                 </h2>
-                <div className="prose prose-neutral dark:prose-invert">
-                    <div className="flex flex-col md:flex-row gap-8">
+                <div className="prose">
+                    <div className="flex flex-col md:flex-row gap-8 items-start">
                         <div className="relative w-full md:w-2/3 aspect-square">
                             <Image
                                 src="/images/foto_Guillem.png"
                                 alt="Guillem Serra"
                                 fill
                                 loading="lazy"
-                                className="object-cover rounded-4xl shadow"
+                                className="object-cover rounded-3xl shadow-lg"
                             />
                         </div>
-                        <div className="flex flex-col gap-4 flex-shrink">
+                        <div className="flex flex-col">
                             <p>
-                                I’m Guillem Serra, a video game programmer with over 5 years of experience using Unreal
-                                Engine (C++) and Unity. My work spans solo indie projects to collaborative studio teams.
+                                I’m Guillem Serra, a video game developer with over 5 years of experience using Unreal
+                                Engine (C++) and Unity.
                             </p>
                             <p>
-                                I care deeply about building reliable, maintainable software that enables creativity —
-                                whether through gameplay mechanics, editor extensions, or procedural systems. I strive
-                                to bridge technical excellence with design intent, bringing ideas to life in ways that
-                                are elegant, efficient, and expressive.
+                                I build systems with scalability in mind, wheter it's gameplay mechanics, editor tools, UI logic, or
+                                procedural generation; designed to boost team productivity and enhance the player
+                                experience. My goal is to turn design intent into expressive, efficient, and
+                                maintainable code.
                             </p>
                             <p>
-                                I’m driven by curiosity and constant learning, and I thrive in environments where
-                                technical challenge meets artistic ambition.
+                                I'm driven by passion for my craft and a constant desire to learn and grow, both
+                                individually and alongside my team. I thrive where technical challenges meet artistic
+                                ambition.
                             </p>
                         </div>
                     </div>
+
                     <CustomMDX source={aboutMdx}/>
                 </div>
             </section>

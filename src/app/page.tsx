@@ -16,18 +16,19 @@ export default function MainPage()
                     className="rounded-4xl object-cover shadow-lg"
                 />
 
-                <div className="max-w-xl space-y-4">
+                <div className="max-w-xl">
                     <h1 className="text-3xl font-bold leading-snug">
-                        Hi! I'm Guillem Serra, a video game programmer with 5+ years of experience in Unreal C++, and
+                        Hi! I'm Guillem Serra, a video games programmer with 5+ years of experience in Unreal C++ and
                         Unity.
                     </h1>
-                    <p className="">
-                        I specialize in scalable code, clean architecture, and bringing ideas to life through gameplay
-                        systems and tools.
+                    <p className="mt-8 text-l">
+                        From solo projects to studio teams, I bring ideas to life through gameplay systems and tools
+                        with scalable architecture in mind.
                     </p>
-                    <p className="mt-4">
-                        I'm always open to discussing creative ideas, meaningful projects, or collaborative
-                        opportunities.
+                    <p className="mt-4 text-l">
+                        I'm open to meaningful and challenging collaborations.
+                    </p>
+                    <p className="text-l">
                         Feel free to reach out!
                     </p>
 
@@ -47,8 +48,7 @@ export default function MainPage()
                     Check out my projects if you're interested!
                 </p>
                 <p className="my-4">
-                    They range from simple junior games to more complex
-                    projects. (Work in progress)
+                    They range from simple junior games to more complex projects.
                 </p>
                 <Projects/>
             </div>
