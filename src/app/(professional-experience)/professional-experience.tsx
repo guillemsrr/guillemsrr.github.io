@@ -27,7 +27,7 @@ export default async function ProfessionalExperience()
             <h2 className="font-bold text-3xl mb-8 tracking-tighter">
                 Professional Experience
             </h2>
-            <div className="prose prose-neutral dark:prose-invert">
+            <div className="prose dark:prose-invert">
                 <CustomMDX source={content}/>
             </div>
         </section>
