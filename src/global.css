@@ -83,12 +83,6 @@ button.general-button:hover
     @apply font-medium;
 }
 
-.prose img
-{
-    /* Don't apply styles to next/image */
-    @apply m-0;
-}
-
 .prose p
 {
     @apply my-4 text-neutral-800 dark:text-neutral-200;
@@ -96,22 +90,22 @@ button.general-button:hover
 
 .prose h1
 {
-    @apply text-4xl font-medium tracking-tight mt-6 mb-2;
+    @apply text-4xl font-medium tracking-tight mt-8 mb-4;
 }
 
 .prose h2
 {
-    @apply text-2xl font-medium tracking-tight mt-6 mb-2;
+    @apply text-2xl font-medium tracking-tight mt-8 mb-2;
 }
 
 .prose h3
 {
-    @apply text-xl font-medium tracking-tight mt-6 mb-2;
+    @apply text-xl font-medium mt-6;
 }
 
 .prose h4
 {
-    @apply text-lg font-medium tracking-tight mt-6 mb-2;
+    @apply text-lg font-medium;
 }
 
 .prose h2 a,
@@ -140,11 +134,4 @@ button.general-button:hover
 .prose ol li
 {
     @apply text-neutral-800 dark:text-neutral-200;
-}
-
-.prose > :first-child
-{
-    /* Override removing top margin, causing layout shift */
-    margin-top: 1.25em !important;
-    margin-bottom: 1.25em !important;
 }
