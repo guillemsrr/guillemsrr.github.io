@@ -1,15 +1,9 @@
-﻿import fs from "fs";
-import {loadProject, Project, ProjectCard, projectsDir} from "@app/(projects)/projectsData";
+﻿import {loadProject, Project, ProjectCard} from "@app/(projects)/projectsData";
 
-export async function getProjects(): Promise<Project[]>
+export async function getSelectedProjects(projectNames: string[]): Promise<Project[]>
 {
-    const files = await fs.promises.readdir(projectsDir);
-    const slugs = files
-        .filter((file) => file.endsWith('.mdx'))
-        .map((file) => file.replace(/\.mdx$/, ''));
-
     const projects = await Promise.all(
-        slugs.map((slug) => loadProject(slug))
+        projectNames.map((slug) => loadProject(slug))
     );
 
     return projects
@@ -22,9 +16,11 @@ export async function getProjects(): Promise<Project[]>
         });
 }
 
-export default async function Projects()
+const selectedSlugs = ['soliloquy', 'archer', 'a-void', 'concrete', 'wfc', 'tarkovsky'];
+
+export default async function SelectedProjects()
 {
-    const projects = await getProjects();
+    const projects = await getSelectedProjects(selectedSlugs);
 
     return (
         <div className="container mx-auto max-w-7xl">

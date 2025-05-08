@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next-export-optimize-images/image";
 import Link from "next/link";
 import Projects from "@app/(projects)/projects/projects";
+import SelectedProjects from "@app/(projects)/SelectedProjects";
 
 export default function MainPage()
 {
@@ -43,14 +44,14 @@ export default function MainPage()
                 </div>
             </div>
 
-            <div className="mt-16">
-                <p className="mt-8">
-                    Check out my projects if you're interested!
+            <div className={"!mt-8 mb-16"}>
+                <h2 className={"!text-3xl"}>
+                    Selected projects:
+                </h2>
+                <p className={"!mt-4 !mb-8"}>
+                    Check out the rest of my projects if you're interested!
                 </p>
-                <p className="my-4">
-                    They range from simple junior games to more complex projects.
-                </p>
-                <Projects/>
+                <SelectedProjects/>
             </div>
         </div>
     )

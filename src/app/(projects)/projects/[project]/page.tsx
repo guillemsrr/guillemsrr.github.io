@@ -1,19 +1,16 @@
 ﻿import {CustomMDX} from '@components/mdx'
-import {notFound} from 'next/navigation'
-import {getProjects, Project} from "@app/(projects)/projects/projects";
 import path from "path";
 import fs from "fs";
 import matter from "gray-matter";
 import Image from "next-export-optimize-images/image";
 import {Tag} from "@app/(professional-experience)/tag";
+import {Project, projectsDir} from "@app/(projects)/projectsData";
+import { getProjects } from '../projects';
 
 async function loadProjectMdx(slug: string)
 {
     const filePath = path.join(
-        process.cwd(),
-        'src',
-        'app',
-        '(projects)',
+        projectsDir,
         `${slug}.mdx`
     );
 
@@ -33,11 +30,6 @@ async function loadProjectMdx(slug: string)
 export default async function ProjectPage({params}: { params: Promise<{ project: string }> })
 {
     const {project: slug} = await params;
-    const projects = await getProjects();
-    const meta = projects.find((p) => p.slug === slug);
-
-    if (!meta) notFound();
-
     const {content, project} = await loadProjectMdx(slug);
 
     return (
@@ -61,7 +53,7 @@ export default async function ProjectPage({params}: { params: Promise<{ project:
                 />
             </div>
             <p>{project.description}</p>
-            
+
             <div className="prose prose-neutral">
                 <CustomMDX source={content}/>
             </div>
@@ -72,8 +64,7 @@ export default async function ProjectPage({params}: { params: Promise<{ project:
 export async function generateMetadata({params}: { params: Promise<{ project: string }> })
 {
     const {project: slug} = await params;
-    const projects = await getProjects();
-    const project = projects.find((p) => p.slug === slug);
+    const {project} = await loadProjectMdx(slug);
     if (!project) return {};
 
     return {
