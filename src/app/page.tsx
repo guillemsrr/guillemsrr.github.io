@@ -23,8 +23,7 @@ export default function MainPage()
                         Unity.
                     </h1>
                     <p className="mt-8 text-l">
-                        From solo projects to studio teams, I bring ideas to life through gameplay systems and tools
-                        with scalable architecture in mind.
+                        Studio-born, indie-hardened, driven to create interactive worlds that strive to leave a mark.
                     </p>
                     <p className="mt-4 text-l">
                         I'm open to meaningful and challenging collaborations.
