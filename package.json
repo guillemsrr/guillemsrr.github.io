@@ -24,15 +24,13 @@
     "react-markdown": "^10.1.0",
     "tailwindcss": "4.1.4",
     "typescript": "5.8.3",
-    "yet-another-react-lightbox": "^3.23.0"
+    "yet-another-react-lightbox": "^3.23.0",
+    "@types/mdx": "^2.0.13"
   },
   "pnpm": {
     "overrides": {
       "@types/react": "19.1.2",
       "@types/react-dom": "19.1.2"
     }
-  },
-  "devDependencies": {
-    "@types/mdx": "^2.0.13"
   }
 }
