@@ -16,7 +16,7 @@ export async function getSelectedProjects(projectNames: string[]): Promise<Proje
         });
 }
 
-const selectedSlugs = ['soliloquy', 'archer', 'a-void', 'concrete', 'wfc', 'tarkovsky'];
+const selectedSlugs = ['soliloquy', 'vgscript', 'archer', 'a-void', 'concrete', 'wfc'];
 
 export default async function SelectedProjects()
 {
