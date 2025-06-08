@@ -37,6 +37,7 @@ export default async function ProjectPage({params}: { params: Promise<{ project:
             <h1 className="font-bold text-4xl">
                 {project.title}
             </h1>
+
             <div className="flex flex-wrap gap-2 mt-4">
                 {project.tags?.split(',').map((tag, index) => (
                     <Tag key={index}>
@@ -52,6 +53,14 @@ export default async function ProjectPage({params}: { params: Promise<{ project:
                     className="object-cover"
                 />
             </div>
+            {project.publishedAt && (
+                <div className={"text-neutral-500 dark:text-neutral-400 my-4"}>
+                    {new Date(project.publishedAt).toLocaleDateString('en-US', {
+                        year: 'numeric',
+                        month: 'long'
+                    })}
+                </div>
+            )}
             <p>{project.description}</p>
 
             <div className="prose prose-neutral">

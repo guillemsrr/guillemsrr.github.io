@@ -40,6 +40,7 @@ export async function loadProject(slug: string): Promise<Project | null>
     }
 }
 
+
 export function ProjectCard({project}: { project: Project })
 {
     return (
@@ -59,6 +60,14 @@ export function ProjectCard({project}: { project: Project })
 
                 <div className="p-4 pb-6 bg-white dark:bg-neutral-900">
                     <h2 className="text-xl font-semibold">{project.title}</h2>
+                    {project.publishedAt && (
+                        <div className="text-sm text-neutral-500 dark:text-neutral-400 mt-1">
+                            {new Date(project.publishedAt).toLocaleDateString('en-US', {
+                                year: 'numeric',
+                                month: 'long'
+                            })}
+                        </div>
+                    )}
                     <p className="mt-2 text-sm text-neutral-600 dark:text-neutral-400">{project.description}</p>
 
                     {project.tags && (
