@@ -7,16 +7,10 @@ export async function getSelectedProjects(projectNames: string[]): Promise<Proje
     );
 
     return projects
-        .filter((p): p is Project => p !== null)
-        .sort((a, b) =>
-        {
-            if (!a.publishedAt) return 1;
-            if (!b.publishedAt) return -1;
-            return new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime();
-        });
+        .filter((p): p is Project => p !== null);
 }
 
-const selectedSlugs = ['soliloquy', 'vgscript', 'archer', 'a-void', 'concrete', 'wfc'];
+const selectedSlugs = ['vgscript', 'soliloquy', 'archer', 'a-void', 'generative-art', 'wfc'];
 
 export default async function SelectedProjects()
 {
