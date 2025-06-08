@@ -9,6 +9,7 @@ const nextConfig: NextConfig = {
         deviceSizes: [640, 1280],
         imageSizes: [],
         formats: ['image/webp'],
+        domains: ['raw.githubusercontent.com'],
     },
 };
 
