@@ -78,6 +78,16 @@ export async function generateMetadata({params}: { params: Promise<{ project: st
     return {
         title: project.title,
         description: project.description,
+        openGraph: {
+            images: [
+                {
+                    url: project.image,
+                    width: 1200,
+                    height: 630,
+                    alt: project.title,
+                }
+            ],
+        }
     };
 }
 
