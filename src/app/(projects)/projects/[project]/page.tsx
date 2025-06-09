@@ -4,8 +4,7 @@ import fs from "fs";
 import matter from "gray-matter";
 import Image from "next-export-optimize-images/image";
 import {Tag} from "@app/(professional-experience)/tag";
-import {Project, projectsDir} from "@app/(projects)/projectsData";
-import { getProjects } from '../projects';
+import {getProjects, Project, projectsDir} from "@app/(projects)/projectsData";
 
 async function loadProjectMdx(slug: string)
 {
