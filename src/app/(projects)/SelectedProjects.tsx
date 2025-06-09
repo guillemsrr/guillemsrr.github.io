@@ -1,4 +1,5 @@
-﻿import {loadProject, Project, ProjectCard} from "@app/(projects)/projectsData";
+﻿import {loadProject, Project} from "@app/(projects)/projectsData";
+import {ProjectCard} from "@app/(projects)/projects/projectCard";
 
 export async function getSelectedProjects(projectNames: string[]): Promise<Project[]>
 {

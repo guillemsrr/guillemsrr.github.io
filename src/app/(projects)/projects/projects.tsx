@@ -1,38 +1,54 @@
-﻿import fs from "fs";
-import {loadProject, Project, ProjectCard, projectsDir} from "@app/(projects)/projectsData";
+﻿'use client';
 
-export async function getProjects(): Promise<Project[]>
+import {useMemo, useState} from "react";
+import {ProjectCard} from "@app/(projects)/projects/projectCard";
+import type {Project} from "@app/(projects)/projectsData";
+
+const FILTERS = ['all', 'Open Source', 'Unreal Engine', 'Unity', 'Raylib', 'Jam'];
+
+export function Projects({projects}: { projects: Project[] })
 {
-    const files = await fs.promises.readdir(projectsDir);
-    const slugs = files
-        .filter((file) => file.endsWith('.mdx'))
-        .map((file) => file.replace(/\.mdx$/, ''));
+    const [activeFilter, setActiveFilter] = useState('all');
 
-    const projects = await Promise.all(
-        slugs.map((slug) => loadProject(slug))
-    );
-
-    return projects
-        .filter((p): p is Project => p !== null)
-        .sort((a, b) =>
+    const filteredProjects = useMemo(() =>
+    {
+        if (activeFilter === 'all')
         {
-            if (!a.publishedAt) return 1;
-            if (!b.publishedAt) return -1;
-            return new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime();
-        });
-}
-
-export default async function Projects()
-{
-    const projects = await getProjects();
+            return projects;
+        }
+        
+        if (activeFilter === 'Open Source')
+        {
+            
+            return projects.filter(project => project.isOpenSourced);
+        }
+        return projects.filter(project => project.tags?.includes(activeFilter));
+    }, [activeFilter, projects]);
 
     return (
-        <div className="container mx-auto max-w-7xl">
+        <>
+            <div className="mb-6 flex gap-4">
+                {FILTERS.map(filter => (
+                    
+                    <button
+                        key={filter}
+                        onClick={() => setActiveFilter(filter)}
+                        className={`px-4 py-2 rounded-lg transition-colors duration-200 ${
+                            activeFilter === filter
+                                ? 'bg-gray-900 dark:bg-gray-100 text-white dark:text-gray-900'
+                                : 'text-gray-900 dark:text-gray-100 hover:bg-gray-300 dark:hover:bg-gray-500 bg-gray-200 dark:bg-gray-700'
+                        }`}
+                    >
+                        {filter}
+                    </button>
+                ))}
+            </div>
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-x-4 gap-y-6">
-                {projects.map((project) => (
+                {filteredProjects.map((project) => (
                     <ProjectCard key={project.slug} project={project}/>
                 ))}
             </div>
-        </div>
+        </>
     );
 }
