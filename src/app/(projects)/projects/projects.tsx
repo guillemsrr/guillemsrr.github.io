@@ -27,13 +27,14 @@ export function Projects({projects}: { projects: Project[] })
 
     return (
         <>
-            <div className="mb-6 flex gap-4">
+            
+            <div className="mb-6 flex flex-wrap gap-2 sm:gap-4">
                 {FILTERS.map(filter => (
-                    
+
                     <button
                         key={filter}
                         onClick={() => setActiveFilter(filter)}
-                        className={`px-4 py-2 rounded-lg transition-colors duration-200 ${
+                        className={`px-2 py-1 sm:px-4 sm:py-2 text-sm sm:text-base rounded-lg transition-colors duration-200 ${
                             activeFilter === filter
                                 ? 'bg-gray-900 dark:bg-gray-100 text-white dark:text-gray-900'
                                 : 'text-gray-900 dark:text-gray-100 hover:bg-gray-300 dark:hover:bg-gray-500 bg-gray-200 dark:bg-gray-700'
