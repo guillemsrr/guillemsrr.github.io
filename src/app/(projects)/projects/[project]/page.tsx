@@ -69,16 +69,18 @@ export default async function ProjectPage({params}: { params: Promise<{ project:
     );
 }
 
-export async function generateMetadata({params}: { params: { project: string } })
+export async function generateMetadata({params}: { params: Promise<{ project: string }> })
 {
-    const {project} = await loadProjectMdx(params.project);
+    const {project: slug} = await params;
+
+    const {project} = await loadProjectMdx(slug);
     return {
         title: project.title,
         description: project.description,
         openGraph: {
             title: project.title,
             description: project.description,
-            url: `https://guillemsrr.github.io/projects/${params.project}/`,
+            url: `https://guillemsrr.github.io/projects/${project}/`,
             images: [
                 {
                     url: project.image.startsWith('http')
