@@ -3,6 +3,7 @@ import path from 'path'
 import fs from 'fs'
 import matter from 'gray-matter'
 import {CustomMDX} from "@components/mdx";
+import React from "react";
 
 async function getAboutMdx()
 {
@@ -37,6 +38,7 @@ export default async function About()
                                 loading="lazy"
                                 className="object-cover rounded-3xl shadow-lg"
                             />
+
                         </div>
                         <div className="flex flex-col">
                             <p>
@@ -44,7 +46,8 @@ export default async function About()
                                 Engine (C++) and Unity.
                             </p>
                             <p>
-                                I build systems with scalability in mind, wheter it's gameplay mechanics, editor tools, UI logic, or
+                                I build systems with scalability in mind, whether it's gameplay mechanics, editor tools,
+                                UI logic, or
                                 procedural generation; designed to boost team productivity and enhance the player
                                 experience. My goal is to turn design intent into expressive, efficient, and
                                 maintainable code.
@@ -54,6 +57,15 @@ export default async function About()
                                 individually and alongside my team. I thrive where technical challenges meet artistic
                                 ambition.
                             </p>
+                            <div>
+                                <a
+                                    href="/Programmer_CV_GuillemSerra.pdf"
+                                    download
+                                    className="email-button px-4 py-2 rounded-lg bg-gray-600 text-white dark:text-white hover:bg-gray-400 dark:hover:bg-gray-500 transition-colors"
+                                >
+                                    Download CV
+                                </a>
+                            </div>
                         </div>
                     </div>
 
