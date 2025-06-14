@@ -4,7 +4,7 @@ import {useMemo, useState} from "react";
 import {ProjectCard} from "@app/(projects)/projects/projectCard";
 import type {Project} from "@app/(projects)/projectsData";
 
-const FILTERS = ['all', 'Open Source', 'Unreal Engine', 'Unity', 'Raylib', 'Jam'];
+const FILTERS = ['all', 'Open Source', 'Unreal Engine', 'Unity', 'Godot', 'Raylib', 'Jam'];
 
 export function Projects({projects}: { projects: Project[] })
 {
@@ -16,10 +16,10 @@ export function Projects({projects}: { projects: Project[] })
         {
             return projects;
         }
-        
+
         if (activeFilter === 'Open Source')
         {
-            
+
             return projects.filter(project => project.isOpenSourced);
         }
         return projects.filter(project => project.tags?.includes(activeFilter));
@@ -27,7 +27,7 @@ export function Projects({projects}: { projects: Project[] })
 
     return (
         <>
-            
+
             <div className="mb-6 flex flex-wrap gap-2 sm:gap-4">
                 {FILTERS.map(filter => (
 
