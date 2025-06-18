@@ -5,6 +5,7 @@ import matter from "gray-matter";
 import Image from "next/image";
 import {Tag} from "@app/(professional-experience)/tag";
 import {getProjects, Project, projectsDir} from "@app/(projects)/projectsData";
+import {imageBaseUrl} from "@components/globals";
 
 async function loadProjectMdx(slug: string)
 {
@@ -46,7 +47,7 @@ export default async function ProjectPage({params}: { params: Promise<{ project:
             </div>
             <div className="mt-4 mb-4 relative h-48">
                 <Image
-                    src={project.image}
+                    src={imageBaseUrl + project.image}
                     alt={project.title}
                     fill
                     className="object-cover"

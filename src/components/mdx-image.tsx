@@ -19,7 +19,6 @@ export default function MDXImage({src, alt = '', className = ''}: MDXImageProps)
           alt={alt}
           fill
           loading="lazy"
-          placeholder="blur"
           style={{objectFit: 'contain'}}
       />
     </span>

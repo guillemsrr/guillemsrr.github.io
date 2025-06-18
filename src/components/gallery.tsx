@@ -4,6 +4,7 @@ import Lightbox from 'yet-another-react-lightbox';
 import 'yet-another-react-lightbox/styles.css';
 import {useState} from 'react';
 import Image from "next/image";
+import {imageBaseUrl} from "@components/globals";
 
 export default function Gallery({
                                     images,
@@ -30,7 +31,7 @@ export default function Gallery({
                     <div className={width ?? 'w-full'} key={idx}
                     >
                         <Image
-                            src={img.src}
+                            src={imageBaseUrl + img.src}
                             alt={img.alt ?? 'image'}
                             width={400}
                             height={300}
@@ -71,7 +72,7 @@ export default function Gallery({
                                     </div>
                                 )}
                                 <Image
-                                    src={slide.src}
+                                    src={imageBaseUrl + slide.src}
                                     alt={slide.alt ?? 'image'}
                                     fill
                                     style={{objectFit: 'contain'}}
