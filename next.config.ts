@@ -10,6 +10,13 @@ const nextConfig: NextConfig = {
         imageSizes: [],
         formats: ['image/webp'],
         domains: ['pub-43bd1a2c92284948a57f7a70decf6fd6.r2.dev'],
+        remotePatterns: [
+            {
+                protocol: 'https',
+                hostname: 'pub-3058dc7a23cc4ae7b1d88c1e7f285539.r2.dev',
+                pathname: '/**',
+            },
+        ],
     },
 };
 
