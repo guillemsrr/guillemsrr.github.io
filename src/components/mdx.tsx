@@ -11,13 +11,12 @@ import MDXImage from "@components/mdx-image";
 
 const mdxComponents: MDXComponents = {
     img: MDXImage,
-
+    
     Image: (props) => (
         <MDXImage
             {...props}
             className={props.className}
             alt={props.alt || ''}
-            sizes="100vw"
         />
     ),
 

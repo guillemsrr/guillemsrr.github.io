@@ -3,6 +3,7 @@ import fs from 'fs';
 import path from 'path';
 import matter from "gray-matter";
 import {CustomMDX} from "@components/mdx";
+import MDXImage from "@components/mdx-image";
 
 async function getExperienceMdx()
 {
