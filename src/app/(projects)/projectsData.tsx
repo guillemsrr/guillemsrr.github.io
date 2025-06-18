@@ -1,6 +1,7 @@
 ﻿import path from "path";
 import fs from "fs";
 import matter from "gray-matter";
+import {imageBaseUrl} from "@components/globals";
 
 export interface Project
 {
@@ -28,7 +29,7 @@ export async function loadProject(slug: string): Promise<Project | null>
             title: data.title,
             description: data.description,
             publishedAt: data.publishedAt,
-            image: data.image,
+            image: imageBaseUrl + data.image,
             tags: data.tags,
             isOpenSourced: data.isOpenSourced
         };

@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next-export-optimize-images/image';
+import {imageBaseUrl} from "@components/globals";
 
 interface MDXImageProps
 {
@@ -14,7 +15,7 @@ export default function MDXImage({src, alt = '', className = ''}: MDXImageProps)
     return (
         <span className={`block relative w-full aspect-video ${className}`}>
       <Image
-          src={src}
+          src={imageBaseUrl + src}
           alt={alt}
           fill
           loading="lazy"

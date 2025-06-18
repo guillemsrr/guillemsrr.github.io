@@ -4,6 +4,7 @@ import fs from 'fs'
 import matter from 'gray-matter'
 import {CustomMDX} from "@components/mdx";
 import React from "react";
+import {imageBaseUrl} from "@components/globals";
 
 async function getAboutMdx()
 {
@@ -32,7 +33,7 @@ export default async function About()
                     <div className="flex flex-col md:flex-row gap-8 items-start">
                         <div className="relative w-full md:w-2/3 aspect-square">
                             <Image
-                                src="/images/foto_Guillem.png"
+                                src={imageBaseUrl + "/images/foto_Guillem.png"}
                                 alt="Guillem Serra"
                                 fill
                                 loading="lazy"
@@ -59,7 +60,7 @@ export default async function About()
                             </p>
                             <div>
                                 <a
-                                    href="/CV_GuillemSerra.pdf"
+                                    href={imageBaseUrl + "/CV_GuillemSerra.pdf"}
                                     download
                                     className="email-button px-4 py-2 rounded-lg bg-gray-600 text-white dark:text-white hover:bg-gray-400 dark:hover:bg-gray-500 transition-colors"
                                 >

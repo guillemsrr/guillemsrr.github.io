@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next-export-optimize-images/image";
 import Link from "next/link";
 import SelectedProjects from "@app/(projects)/SelectedProjects";
+import {imageBaseUrl} from "@components/globals";
 
 export default function MainPage()
 {
@@ -10,7 +11,7 @@ export default function MainPage()
             <div className="flex flex-col md:flex-row items-center gap-10">
                 <Image
                     alt="Guillem Serra"
-                    src="/images/foto_Guillem.png"
+                    src={imageBaseUrl + "/images/foto_Guillem.png"}
                     width={350}
                     height={250}
                     className="rounded-4xl object-cover shadow-lg"
@@ -40,7 +41,7 @@ export default function MainPage()
                             Email me
                         </Link>
                         <a
-                            href="/CV_GuillemSerra.pdf"
+                            href={imageBaseUrl + "/CV_GuillemSerra.pdf"}
                             download
                             className="email-button inline-block px-4 py-2 rounded-lg bg-gray-600 text-white hover:bg-gray-400 dark:hover:bg-gray-500 transition-colors"
                         >
