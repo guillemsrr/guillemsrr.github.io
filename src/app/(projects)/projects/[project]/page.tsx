@@ -2,7 +2,7 @@
 import path from "path";
 import fs from "fs";
 import matter from "gray-matter";
-import Image from "next-export-optimize-images/image";
+import Image from "next/image";
 import {Tag} from "@app/(professional-experience)/tag";
 import {getProjects, Project, projectsDir} from "@app/(projects)/projectsData";
 

@@ -1,5 +1,5 @@
 ﻿import LinkIcon from './link-icon'
-import Image from "next-export-optimize-images/image";
+import Image from "next/image";
 
 export default function ExternalLinks()
 {

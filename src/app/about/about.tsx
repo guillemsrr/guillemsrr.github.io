@@ -1,4 +1,4 @@
-﻿import Image from 'next-export-optimize-images/image'
+﻿import Image from "next/image";
 import path from 'path'
 import fs from 'fs'
 import matter from 'gray-matter'

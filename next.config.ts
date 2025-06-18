@@ -1,10 +1,10 @@
-﻿import withExportImages from 'next-export-optimize-images';
-import type {NextConfig} from 'next';
+﻿import type {NextConfig} from 'next';
 
 const nextConfig: NextConfig = {
     output: 'export',
     trailingSlash: true,
     images: {
+        unoptimized: true,
         loader: 'default',
         deviceSizes: [640, 1280],
         imageSizes: [],
@@ -20,4 +20,4 @@ const nextConfig: NextConfig = {
     },
 };
 
-export default withExportImages(nextConfig);
+export default nextConfig;

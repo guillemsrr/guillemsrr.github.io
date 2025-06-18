@@ -1,8 +1,8 @@
 import React from "react";
-import Image from "next-export-optimize-images/image";
 import Link from "next/link";
 import SelectedProjects from "@app/(projects)/SelectedProjects";
 import {imageBaseUrl} from "@components/globals";
+import Image from "next/image";
 
 export default function MainPage()
 {

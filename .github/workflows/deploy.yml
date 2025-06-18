@@ -33,7 +33,7 @@ jobs:
       - name: Clean previous export
         run: rm -rf out
 
-      - name: Build & optimize images
+      - name: Build
         run: pnpm build
 
       - name: Inspect output size

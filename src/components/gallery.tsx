@@ -3,7 +3,7 @@
 import Lightbox from 'yet-another-react-lightbox';
 import 'yet-another-react-lightbox/styles.css';
 import {useState} from 'react';
-import Image from 'next-export-optimize-images/image';
+import Image from "next/image";
 
 export default function Gallery({
                                     images,
