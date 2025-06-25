@@ -4,7 +4,7 @@ import {useMemo, useState} from "react";
 import {ProjectCard} from "@app/(projects)/projects/projectCard";
 import type {Project} from "@app/(projects)/projectsData";
 
-const FILTERS = ['all', 'Open Source', 'Unreal Engine', 'Unity', 'Godot', 'Raylib', 'Jam'];
+const FILTERS = ['all', 'Open Source', 'Unreal Engine', 'Unity', 'OpenGL, SDL, Raylib', 'Godot', 'Jam'];
 
 export function Projects({projects}: { projects: Project[] })
 {
@@ -19,10 +19,21 @@ export function Projects({projects}: { projects: Project[] })
 
         if (activeFilter === 'Open Source')
         {
-
             return projects.filter(project => project.isOpenSourced);
         }
-        return projects.filter(project => project.tags?.includes(activeFilter));
+
+        return projects.filter(project =>
+        {
+            const tags: string[] = project.tags?.split(',').map(tag => tag.trim()) || [];
+            if (activeFilter.includes(','))
+            {
+                const group = activeFilter.split(',').map(tag => tag.trim());
+                return tags.some(tag => group.includes(tag));
+            }
+
+            return tags.includes(activeFilter);
+        });
+
     }, [activeFilter, projects]);
 
     return (
@@ -35,6 +46,7 @@ export function Projects({projects}: { projects: Project[] })
                         key={filter}
                         onClick={() => setActiveFilter(filter)}
                         className={`px-2 py-1 sm:px-4 sm:py-2 text-sm sm:text-base rounded-lg transition-colors duration-200 ${
+
                             activeFilter === filter
                                 ? 'bg-gray-900 dark:bg-gray-100 text-white dark:text-gray-900'
                                 : 'text-gray-900 dark:text-gray-100 hover:bg-gray-300 dark:hover:bg-gray-500 bg-gray-200 dark:bg-gray-700'
