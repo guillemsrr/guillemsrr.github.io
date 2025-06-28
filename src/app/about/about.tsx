@@ -43,7 +43,7 @@ export default async function About()
                         </div>
                         <div className="flex flex-col">
                             <p>
-                                I’m Guillem Serra, a video game developer with over 5 years of experience using Unreal
+                                I’m Guillem Serra, a video game developer with over six years of experience using Unreal
                                 Engine (C++) and Unity.
                             </p>
                             <p>

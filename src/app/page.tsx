@@ -19,7 +19,7 @@ export default function MainPage()
 
                 <div className="max-w-xl">
                     <h1 className="text-3xl font-bold leading-snug">
-                        Hi! I'm Guillem Serra, a video games programmer with 5+ years of experience in Unreal C++ and
+                        Hi! I'm Guillem Serra, a video games programmer with 6+ years of experience in Unreal C++ and
                         Unity.
                     </h1>
                     <p className="mt-8 text-l">
