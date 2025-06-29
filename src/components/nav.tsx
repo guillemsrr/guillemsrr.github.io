@@ -4,43 +4,30 @@ import Link from "next/link";
 
 export function Navbar()
 {
-    const scrollToSection = (e, sectionId) =>
-    {
-        e.preventDefault()
-        const section = document.querySelector(sectionId)
-        if (section)
-        {
-            window.scrollTo({
-                top: section.offsetTop - 100,
-                behavior: 'smooth'
-            })
-        }
-    }
-
     return (
-        <nav className="">
-                <div className="flex flex-row items-stretch font-medium">
-                    <Link
-                        href="/projects"
-                        className="flex items-center h-full p-2 md:p-4 general-anchor !hover:bg-red-400"
-                    >
-                        Projects
-                    </Link>
+        <nav className="w-full">
+            <div className="flex flex-row items-center justify-center md:justify-start gap-2 md:gap-4">
+                <Link
+                    href="/projects"
+                    className="flex justify-center items-center text-center px-4 py-2 md:px-6 md:py-3 general-anchor"
+                >
+                    Projects
+                </Link>
 
-                    <Link
-                        href="/professional-experience"
-                        className="flex items-center h-full p-2 md:p-4 general-anchor"
-                    >
-                        Professional Experience
-                    </Link>
+                <Link
+                    href="/professional-experience"
+                    className="flex justify-center items-center text-center px-4 py-2 md:px-6 md:py-3 general-anchor"
+                >
+                    Professional Experience
+                </Link>
 
-                    <Link
-                        href="/about"
-                        className="flex items-center h-full p-2 md:p-4 general-anchor"
-                    >
-                        About me
-                    </Link>
-                </div>
+                <Link
+                    href="/about"
+                    className="flex justify-center items-center text-center px-4 py-2 md:px-6 md:py-3 general-anchor"
+                >
+                    About me
+                </Link>
+            </div>
         </nav>
-    )
+    );
 }
