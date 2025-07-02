@@ -103,14 +103,8 @@ button.general-button:hover
 
 .prose h3
 {
-    @apply text-xl font-medium mt-6;
-}
-
-.prose h4
-{
     @apply text-lg font-medium;
 }
-
 
 .prose strong
 {
@@ -131,4 +125,10 @@ button.general-button:hover
 .prose ol li
 {
     @apply text-neutral-800 dark:text-neutral-200 font-light leading-relaxed;
+}
+
+table td
+{
+    padding-right: 2rem;
+    padding-bottom: 1rem;
 }

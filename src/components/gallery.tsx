@@ -3,60 +3,49 @@
 import Lightbox from 'yet-another-react-lightbox';
 import 'yet-another-react-lightbox/styles.css';
 import {useState} from 'react';
-import Image from "next/image";
-import {imageBaseUrl} from "@components/globals";
+import Image from 'next/image';
+import {imageBaseUrl} from '@components/globals';
 
 export default function Gallery({
                                     images,
-                                    width,
-                                    compress
+                                    cols = 3,
                                 }: {
     images: { src: string; alt?: string }[];
-    width?: string;
-    compress?: boolean;
+    cols?: number;
 })
 {
     const [imageIndex, setImageIndex] = useState<number>(-1);
 
+    const gridCols = `grid-cols-2 md:grid-cols-${cols}`;
+
     return (
         <>
-            <div
-                className={
-                    compress
-                        ? 'flex flex-wrap justify-center gap-4'
-                        : 'grid grid-cols-2 md:grid-cols-3 gap-4'
-                }
-            >
+            <div className={`grid ${gridCols} gap-4`}>
                 {images.map((img, idx) => (
-                    <div className={width ?? 'w-full'} key={idx}
+                    <div
+                        key={idx}
+                        className="w-full aspect-square relative overflow-hidden cursor-pointer hover:scale-105 transition"
+                        onClick={() => setImageIndex(idx)}
                     >
                         <Image
                             src={imageBaseUrl + img.src}
                             alt={img.alt ?? 'image'}
-                            width={400}
-                            height={300}
+                            fill
+                            className="object-cover transition duration-300"
                             loading="lazy"
-                            onClick={() =>
-                            {
-                                setImageIndex(idx); // Set the clicked image index
-                            }}
-                            className="cursor-pointer"
                         />
                     </div>
                 ))}
             </div>
 
             <Lightbox
-                open={imageIndex !== -1} // Only show lightbox when an image is selected
-                close={() => setImageIndex(-1)} // Close the lightbox
-                index={imageIndex} // Pass the current index directly
-                slides={images.map((image) => ({src: image.src, alt: image.alt}))} // Map slides correctly
-                carousel={{finite: true}} // Prevent wrapping around the carousel
+                open={imageIndex !== -1}
+                close={() => setImageIndex(-1)}
+                index={imageIndex}
+                slides={images.map((image) => ({src: image.src, alt: image.alt}))}
+                carousel={{finite: true}}
                 on={{
-                    view: ({index}) =>
-                    {
-                        setImageIndex(index); // Use the latest index from the event to set the imageIndex
-                    }
+                    view: ({index}) => setImageIndex(index),
                 }}
                 render={{
                     slide: ({slide}) =>
@@ -95,12 +84,12 @@ export default function Gallery({
                                 color: 'white',
                                 padding: '0.5rem 1rem',
                                 borderRadius: '0.375rem',
-                                fontSize: '0.875rem'
+                                fontSize: '0.875rem',
                             }}
                         >
-                            {imageIndex + 1} / {images.length} {/* Show current/max */}
+                            {imageIndex + 1} / {images.length}
                         </div>
-                    )
+                    ),
                 }}
             />
         </>

@@ -7,26 +7,23 @@ tags: "Unity, Procgen"
 isOpenSourced: true
 ---
 
-Test with the editor my  procedural generation algorithm, made in C# in Unity.
+Test with the editor my procedural generation algorithm, made in C# in Unity.
 
 The original game that uses it is Deep Beneath.
 
-Algorithm process:
+### Algorithm process:
 
-Random positions in 2D hexagon grid.
-3D Hexagonal Caves instantiation, walls cutting.
-Graph creation based on hexs (nodes).
-Edges creation (tunnels) based on walls normals and checking intersections.
-Breadth First Search to check if the level is explorable.
-Tunnels instantiation according to edges.
-Props instantiation.
-Rocks instantiation using Poisson-Disc Sampling algorithm.
-Falling Path creation (slightly different algorithm).
+- Random positions in 2D hexagon grid.
+- 3D Hexagonal Caves instantiation, walls cutting.
+- Graph creation based on hexs (nodes).
+- Edges creation (tunnels) based on walls normals and checking intersections.
+- Breadth First Search to check if the level is explorable.
+- Tunnels instantiation according to edges.
+- Props instantiation.
+- Rocks instantiation using Poisson-Disc Sampling algorithm.
+- Falling Path creation (slightly different algorithm).
+
 3D assets by Pol Blanes & Adrià Fret.
-
-You can download the project on GitHub.
-
-[GitHub](https://github.com/guillemsrr/Procedural-Caves-Creator)
 
 <Gallery
   images={[
@@ -52,3 +49,5 @@ You can download the project on GitHub.
 ![Image](/images/projects/caves/camera.gif)
 ![Image](/images/projects/caves/map.gif)
 ![Image](/images/projects/caves/deepBeneath.gif)
+
+[GitHub](https://github.com/guillemsrr/Procedural-Caves-Creator) (the code doesn't represent my current skills (omg!))

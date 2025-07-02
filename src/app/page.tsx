@@ -11,7 +11,7 @@ export default function MainPage()
             <div className="flex flex-col md:flex-row items-center gap-10">
                 <Image
                     alt="Guillem Serra"
-                    src={imageBaseUrl + "/images/foto_Guillem.png"}
+                    src={imageBaseUrl + "/images/guillem1.jpg"}
                     width={350}
                     height={250}
                     className="rounded-4xl object-cover shadow-lg"
@@ -19,12 +19,10 @@ export default function MainPage()
 
                 <div className="max-w-xl">
                     <h1 className="text-3xl font-bold leading-snug">
-                        Hi! I'm Guillem Serra, a video games programmer with 6+ years of experience in Unreal C++ and
-                        Unity.
+                        Hi! I'm Guillem Serra, a video game programmer with over 6 years of professional experience.
                     </h1>
                     <p className="mt-8 text-l">
-                        Studio-born, indie-hardened, driven to create interactive experiences that strive to leave a
-                        mark.
+                        From studios to indie projects, I create interactive worlds built to grow and stay with players.
                     </p>
                     <p className="mt-4 text-l">
                         I'm open to meaningful and challenging collaborations.
@@ -51,13 +49,8 @@ export default function MainPage()
                 </div>
             </div>
 
-            <div className={"!mt-8 mb-16"}>
-                <h2 className={"!text-3xl"}>
-                    Selected projects:
-                </h2>
-                <p className={"!mt-4 !mb-8"}>
-                    Check out the rest of my projects if you're interested!
-                </p>
+            <div className={"mt-8 mb-16"}>
+                <h2 className={"my-4 text-xl"}>Check these out! They're open source! :0</h2>
                 <SelectedProjects/>
             </div>
         </div>

@@ -33,18 +33,17 @@ export default async function About()
                     <div className="flex flex-col md:flex-row gap-8 items-start">
                         <div className="relative w-full md:w-2/3 aspect-square">
                             <Image
-                                src={imageBaseUrl + "/images/foto_Guillem.png"}
+                                src={imageBaseUrl + "/images/guillem2.jpeg"}
                                 alt="Guillem Serra"
                                 fill
                                 loading="lazy"
-                                className="object-cover rounded-3xl shadow-lg"
+                                className="object-cover rounded-4xl shadow-lg"
                             />
 
                         </div>
                         <div className="flex flex-col">
                             <p>
-                                I’m Guillem Serra, a video game developer with over six years of experience using Unreal
-                                Engine (C++) and Unity.
+                                I'm Guillem Serra, a video game programmer with over 6 years of professional experience.
                             </p>
                             <p>
                                 I build systems with scalability in mind, whether it's gameplay mechanics, editor tools,
@@ -58,18 +57,11 @@ export default async function About()
                                 individually and alongside my team. I thrive where technical challenges meet artistic
                                 ambition.
                             </p>
-                            <div>
-                                <a
-                                    href={imageBaseUrl + "/CV_GuillemSerra_GameProgrammer.pdf"}
-                                    download
-                                    className="email-button px-4 py-2 rounded-lg bg-gray-600 text-white dark:text-white hover:bg-gray-400 dark:hover:bg-gray-500 transition-colors"
-                                >
-                                    Download CV
-                                </a>
-                            </div>
+                            {/*<p>
+                                In the picture I almost couldn't open my eyes!!
+                            </p>*/}
                         </div>
                     </div>
-
                     <CustomMDX source={aboutMdx}/>
                 </div>
             </section>

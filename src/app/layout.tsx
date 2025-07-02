@@ -4,7 +4,7 @@ import {montserrat} from '@app/fonts'
 import React, {ReactNode} from "react";
 import Providers from "@components/providers";
 import {Header} from "@app/(header)/header";
-import {Navbar} from "@components/nav";
+import {Navbar} from "@components/navbar";
 import Footer from "@components/footer";
 
 export default function RootLayout({children}: { children: React.ReactNode })

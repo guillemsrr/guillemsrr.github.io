@@ -11,7 +11,7 @@ export async function getSelectedProjects(projectNames: string[]): Promise<Proje
         .filter((p): p is Project => p !== null);
 }
 
-const selectedSlugs = ['vgscript', 'soliloquy', 'archer', 'snake', 'wfc-godot', 'cellular-automata'];
+const selectedSlugs = ['snake', 'vgscript', 'wfc-godot'];
 
 export default async function SelectedProjects()
 {
@@ -19,8 +19,8 @@ export default async function SelectedProjects()
 
     return (
         <div className="container mx-auto max-w-7xl">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-x-4 gap-y-6">
-                {projects.map((project) => (
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-x-4 gap-y-6 items-start">
+            {projects.map((project) => (
                     <ProjectCard key={project.slug} project={project}/>
                 ))}
             </div>
