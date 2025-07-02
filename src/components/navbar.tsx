@@ -17,7 +17,7 @@ export function Navbar()
 
     return (
         <nav className="w-full">
-            <div className="flex flex-row items-center justify-center md:justify-start">
+            <div className="flex flex-row flex-wrap items-center justify-center md:justify-start">
                 {links.map(({href, label}) =>
                 {
                     let isActive = pathname.includes(href);
@@ -28,7 +28,7 @@ export function Navbar()
 
                     const baseClasses =
                         'flex justify-center items-center text-center px-4 py-2 md:px-6 md:py-3 transition';
-                    const activeClasses = 'bg-neutral-400 dark:bg-neutral-500';
+                    const activeClasses = 'bg-neutral-500 text-neutral-100 dark:bg-neutral-500';
                     const inactiveClasses = 'general-anchor';
 
                     return (
