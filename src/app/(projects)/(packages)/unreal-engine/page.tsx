@@ -3,7 +3,7 @@
 export default async function UnrealProjects()
 {
     return (
-        <div className="mx-auto max-w-7xl md:px-4">
+        <div>
             <DescriptionProject projectSlug="soliloquy">
                 <div>
                     <h3>Generalist programmer</h3>

@@ -3,7 +3,7 @@
 export default async function UnityProjects()
 {
     return (
-        <div className="container mx-auto max-w-7xl px-4">
+        <div>
             <DescriptionProject projectSlug="wfc-unity">
                 <div>
                     <h3>Procedural Generation experiment</h3>
