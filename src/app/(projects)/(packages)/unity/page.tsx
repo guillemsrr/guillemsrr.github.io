@@ -42,7 +42,7 @@ export default async function UnityProjects()
 
             <DescriptionProject projectSlug="mvc">
                 <div>
-                    <h3>Software architecture pattern practice</h3>
+                    <h3>Software architecture pattern Implementation</h3>
                     <p>
                         Implemented the Model-View-Controller pattern in Unity through a user task editor prototype.
                         Demonstrated separation of concerns and clean UI logic communication for scalable application

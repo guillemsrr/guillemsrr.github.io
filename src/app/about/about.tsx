@@ -33,7 +33,7 @@ export default async function About()
                     <div className="flex flex-col md:flex-row gap-8 items-start">
                         <div className="relative w-full md:w-2/3 aspect-square">
                             <Image
-                                src={imageBaseUrl + "/images/guillem2.jpeg"}
+                                src={imageBaseUrl + "/images/guillem1.jpg"}
                                 alt="Guillem Serra"
                                 fill
                                 loading="lazy"

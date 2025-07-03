@@ -44,15 +44,14 @@ export default async function UnrealProjects()
 
             <DescriptionProject projectSlug="snake">
                 <div>
-                    <h3>Low-level C++ OpenGL practice</h3>
+                    <h3>Low-level C++ OpenGL exploration</h3>
                     <p>
                         A real-time 3D snake implementation using SDL3 and OpenGL, featuring pathfinding and simple
                         audio synths.
                     </p>
                     <p>
                         I developed this project to deepen my understanding of low-level rendering with OpenGL and to
-                        practice
-                        my C++ skills without using Unreal Engine. Next stop, multithreading!
+                        sharpen my C++ skills without using Unreal Engine. Next stop, multithreading!
                     </p>
                 </div>
             </DescriptionProject>
@@ -61,9 +60,8 @@ export default async function UnrealProjects()
                 <div>
                     <h3>Gameplay programmer, Top-down prototype</h3>
                     <p>
-                        I wanted to practice UE C++ so I built an event-driven state machine to manage locomotion and
-                        player actions.
-                        Focusing on clarity and scalability of logic.
+                        Developed an event-driven state machine in Unreal Engine C++ to manage player locomotion and
+                        actions, as part of a self-initiated system architecture exploration.
                     </p>
                 </div>
             </DescriptionProject>
@@ -88,7 +86,7 @@ export default async function UnrealProjects()
 
             <DescriptionProject projectSlug="cellular-automata">
                 <div>
-                    <h3>Raylib C++ practice</h3>
+                    <h3>Raylib C++ Prototype</h3>
                     <p>
                         For a long time I wanted to try out the "Conway's Game of Life" algorithm, so it was time to
                         show my skills as a C++ developer
