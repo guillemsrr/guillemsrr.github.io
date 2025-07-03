@@ -4,6 +4,25 @@ export default async function UnityProjects()
 {
     return (
         <div>
+            <div className={"prose mb-8"}>
+                <h2>Unity Development</h2>
+                <p>
+                    My first professional experiences in the video game industry are with Unity. I've built gameplay systems, 
+                    procedural generation tools, UI/UX architecture for both mobile and VR devices.
+                    Most of this portfolio work was developed in solo or small-team environments, 
+                    with an emphasis on clean code, scalability, and experimenting with systems thinking through
+                    personal projects and game jams.
+                </p>
+                <p>
+                    While my current focus is Unreal Engine, I remain highly proficient in Unity and open to
+                    contributing to Unity-based projects.
+                    I'm comfortable with both OOP and ECS/DOTS.
+                </p>
+                <p>
+                    Below is a selection of Unity-based projects showcasing my skills,
+                    mainly for game jams and procedural generation experiments.
+                </p>
+            </div>
             <DescriptionProject projectSlug="wfc-unity">
                 <div>
                     <h3>Procedural Generation experiment</h3>
@@ -12,17 +31,19 @@ export default async function UnityProjects()
                         Focused on constraint propagation, pattern entropy, and runtime visualization.
                     </p>
                     <p>
-                        I created different projects to keep improving my skills and understanding of the algorithm, while participating in different PROCGEN jams.
+                        I created different projects to keep improving my skills and understanding of the algorithm,
+                        while participating in different PROCGEN jams.
                     </p>
                 </div>
             </DescriptionProject>
 
             <DescriptionProject projectSlug="wfc-godot">
                 <div>
-                    <h3>Procedural Generation (again?) yeah but now in Godot (C#)</h3>
+                    <h3>Procedural Generation (again?) yup, but now in Godot (C#)</h3>
                     <p>
                         Ported the WFC algorithm to Godot to test the engine and reuse my C# skills.
-                        This time I wanted to create some type of game so I came up with the idea of infinite jigsaw puzzles, using any image provided.
+                        This time I wanted to create some type of game so I came up with the idea of infinite jigsaw
+                        puzzles, using any image provided.
                     </p>
                 </div>
             </DescriptionProject>
@@ -55,10 +76,12 @@ export default async function UnityProjects()
                 <div>
                     <h3>Gameplay programming, Vertical Slice</h3>
                     <p>
-                        Designed and implemented a prototype of a puzzle-adventure game made in University, in a small team.
+                        Designed and implemented a prototype of a puzzle-adventure game made in University, in a small
+                        team.
                     </p>
                     <p>
-                        The game wasn't continued after university, but was a great learning experience; particularly for
+                        The game wasn't continued after university, but was a great learning experience; particularly
+                        for
                         designing a scalable architecture for mechanics with interactable elements,
                         Iks, Game/Level design, and as scene lighting.
                     </p>
@@ -74,39 +97,23 @@ export default async function UnityProjects()
                         branching dialogue and emotional storytelling.
                     </p>
                     <p>
-                        
+
                     </p>
                 </div>
             </DescriptionProject>
-            
+
             <DescriptionProject projectSlug="time-for-democracy">
                 <div>
                     <h3>Short game made with a political theme</h3>
                     <p>
                         Explored a conceptual game design with symbolic mechanics and minimalistic game feel.
-                        I wanted to create use my programming skills for steering behaviors and units movement.  
+                        I wanted to create use my programming skills for steering behaviors and units movement.
                     </p>
                     <p>
-                        Made for a game design class where the teacher asked for "a game that featured time in some way".
-                        My young political mind couldn't think about anything else than this "time domaining" history-twisting era. 
-                    </p>
-                </div>
-            </DescriptionProject>
-
-
-
-            <DescriptionProject projectSlug="procedural-cave">
-                <div>
-                    <h3>Procedural generation experiment</h3>
-                    <p>
-                        Made this editor tool for a game about a goblin miner, that keeps digging and digging deep beneath
-                        to find minerals and defend against giant spiders and worms.
-                    </p>
-                    <p>
-                        I used a hexagonal grid with a graph-based system to detect if all caves are reachable by the player.
-                    </p>
-                    <p>
-                        It's open source but the code does not represent my current programming skills! By bye SOLID!
+                        Made for a game design class where the teacher asked for "a game that featured time in some
+                        way".
+                        My young political mind couldn't think about anything else than this "time domaining"
+                        history-twisting era.
                     </p>
                 </div>
             </DescriptionProject>

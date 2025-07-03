@@ -28,7 +28,7 @@ export function Navbar()
 
                     const baseClasses =
                         'flex justify-center items-center text-center px-4 py-2 md:px-6 md:py-3 transition';
-                    const activeClasses = 'bg-neutral-500 text-neutral-100 dark:bg-neutral-500';
+                    const activeClasses = 'bg-neutral-500 text-neutral-100 dark:text-black font-semibold dark:bg-neutral-400';
                     const inactiveClasses = 'general-anchor';
 
                     return (

@@ -1,6 +1,6 @@
 ﻿import Link from "next/link";
 import Image from "next/image";
-import {Tag} from "@app/(professional-experience)/tag";
+import {Tag} from "@components/tag";
 import {Project} from "@app/(projects)/projectsData";
 
 export function ProjectCard({project}: { project: Project })

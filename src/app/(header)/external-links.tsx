@@ -24,12 +24,16 @@ export default function ExternalLinks()
                         className="flex items-center p-2 rounded-lg general-anchor"
                         rel="noopener noreferrer"
                         target="_blank"
-                        href="https://www.linkedin.com/in/guillemserralorenz/"
+                        href="https://guillem-serra.itch.io/"
                     >
-                        <LinkIcon
-                            path="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2zM4 2a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"
+                        <Image
+                            src="/itchio.svg"
+                            alt="Itch.io"
+                            width={24}
+                            height={24}
+                            className="dark:invert transition-all"
                         />
-                        <p className="ml-2">linkedin</p>
+                        <p className="ml-2">itch</p>
                     </a>
                 </li>
                 <li>
@@ -37,16 +41,30 @@ export default function ExternalLinks()
                         className="flex items-center p-2 rounded-lg general-anchor"
                         rel="noopener noreferrer"
                         target="_blank"
-                        href="https://guillem-serra.itch.io/"
+                        href="https://www.behance.net/guillemserra"
                     >
                         <Image
-                            src="/itchio-textless-black.svg"
-                            alt="Itch.io"
+                            src="/behance.svg"
+                            alt="Behance"
                             width={24}
                             height={24}
                             className="dark:invert transition-all"
                         />
-                        <p className="ml-2">itch</p>
+
+                        <p className="ml-1">behance</p>
+                    </a>
+                </li>
+                <li>
+                    <a
+                        className="flex items-center p-2 rounded-lg general-anchor"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                        href="https://www.linkedin.com/in/guillemserralorenz/"
+                    >
+                        <LinkIcon
+                            path="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2zM4 2a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"
+                        />
+                        <p className="ml-2">linkedin</p>
                     </a>
                 </li>
             </ul>

@@ -3,9 +3,9 @@ import path from "path";
 import fs from "fs";
 import matter from "gray-matter";
 import Image from "next/image";
-import {Tag} from "@app/(professional-experience)/tag";
 import {getProjects, Project, projectsDir} from "@app/(projects)/projectsData";
 import {imageBaseUrl} from "@components/globals";
+import {Tag} from "@components/tag";
 
 async function loadProjectMdx(slug: string)
 {

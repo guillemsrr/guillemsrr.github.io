@@ -4,6 +4,23 @@ export default async function UnrealProjects()
 {
     return (
         <div>
+            <div className={"prose mb-8"}>
+                <h2>Unreal Engine Development</h2>
+                <p>
+                    Over the past years I’ve worked extensively with Unreal Engine across a variety of
+                    roles, from gameplay systems programming to tooling UI and AI, always with a strong focus on code
+                    architecture, scalability, and production-ready workflows.
+                </p>
+                <p>
+                    I've contributed both as a solo developer and within multidisciplinary AA teams, taking ownership of
+                    major features, developing in-editor tools to streamline workflows, and implementing scalable runtime architectures
+                    for complex player interactions, procedural content, and reactive audio/AI systems.
+                </p>
+                <p>
+                    Below is a selection of Unreal-based projects that reflect different aspects of my work, from
+                    commercial game development to simple prototypes and game jam explorations.
+                </p>
+            </div>
             <DescriptionProject projectSlug="soliloquy">
                 <div>
                     <h3>Generalist programmer</h3>
