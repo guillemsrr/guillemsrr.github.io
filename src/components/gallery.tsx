@@ -24,7 +24,7 @@ export default function Gallery({
                 {images.map((img, idx) => (
                     <div
                         key={idx}
-                        className="w-full aspect-square relative overflow-hidden cursor-pointer hover:scale-105 transition"
+                        className={"w-full aspect-square relative overflow-hidden cursor-pointer transition hover:scale-105 hover:ring-3 hover:ring-neutral-600 dark:hover:ring-neutral-300"}
                         onClick={() => setImageIndex(idx)}
                     >
                         <Image
