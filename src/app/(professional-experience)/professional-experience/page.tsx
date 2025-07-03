@@ -3,6 +3,7 @@ import React from 'react';
 import Image from 'next/image';
 import {ExperienceEntry} from "@app/(professional-experience)/experienceEntry";
 import YouTube from "@components/video-youtube";
+import {imageBaseUrl} from "@components/globals";
 
 export const metadata: Metadata = {
     title: 'Professional Experience',
@@ -33,7 +34,7 @@ export default async function ProfessionalExperiencePage()
                 experienceSlug={"pluno"}
                 visual={<Image
                     alt="Generation image"
-                    src={"/images/pluno.png"}
+                    src={imageBaseUrl + "/images/pluno.png"}
                     width={400}
                     height={400}
                     className="my-8"
