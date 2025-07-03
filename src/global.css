@@ -90,9 +90,14 @@ button.general-button:hover
     content: '#';
 }
 
+.h1
+{
+    @apply text-4xl font-medium tracking-tight mt-4 mb-6;
+}
+
 .prose h1
 {
-    @apply text-4xl font-medium tracking-tight mt-8 mb-4;
+    @apply text-4xl font-medium tracking-tight mt-4 mb-6;
 }
 
 .prose h2

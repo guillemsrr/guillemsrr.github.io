@@ -13,9 +13,9 @@ export default async function ProjectsPage()
 
     return (
         <section>
-            <h2 className="font-bold text-3xl mb-8 tracking-tighter">
+            <h1 className="h1">
                 Projects
-            </h2>
+            </h1>
             <Projects projects={projects}/>
         </section>
     )

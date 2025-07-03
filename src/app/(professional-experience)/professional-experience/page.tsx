@@ -14,7 +14,7 @@ export default async function ProfessionalExperiencePage()
 {
     return (
         <div>
-            <h2 className="font-bold text-3xl mb-8 tracking-tighter">
+            <h2 className="font-bold text-2xl mb-8 tracking-tighter">
                 Professional Experience
             </h2>
 

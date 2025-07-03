@@ -5,7 +5,7 @@ export default async function UnityProjects()
     return (
         <div>
             <div className={"prose mb-8"}>
-                <h2>Unity Development</h2>
+                <h1>Unity Development</h1>
                 <p>
                     My first professional experiences in the video game industry are with Unity. I've built gameplay systems, 
                     procedural generation tools, UI/UX architecture for both mobile and VR devices.

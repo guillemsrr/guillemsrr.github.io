@@ -5,7 +5,7 @@ export default async function UnrealProjects()
     return (
         <div>
             <div className={"prose mb-8"}>
-                <h2>Unreal Engine Development</h2>
+                <h1>Unreal Engine Development</h1>
                 <p>
                     Over the past years I’ve worked extensively with Unreal Engine across a variety of
                     roles, from gameplay systems programming to tooling UI and AI, always with a strong focus on code
