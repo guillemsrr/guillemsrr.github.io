@@ -37,24 +37,24 @@ export function Projects({projects}: { projects: Project[] })
     }, [activeFilter, projects]);
 
     return (
-        <>
-
-            <div className="mb-6 flex flex-wrap gap-2 sm:gap-4">
-                {FILTERS.map(filter => (
-
-                    <button
-                        key={filter}
-                        onClick={() => setActiveFilter(filter)}
-                        className={`px-2 py-1 sm:px-4 sm:py-2 text-sm sm:text-base rounded-lg transition-colors duration-200 ${
-
-                            activeFilter === filter
-                                ? 'bg-gray-900 dark:bg-gray-100 text-white dark:text-gray-900'
-                                : 'text-gray-900 dark:text-gray-100 hover:bg-gray-300 dark:hover:bg-gray-500 bg-gray-200 dark:bg-gray-700'
-                        }`}
-                    >
-                        {filter}
-                    </button>
-                ))}
+        <div className={""}>
+            <div className={"px-2 bg-neutral-50 dark:bg-neutral-700"}>
+                {/*<h2 className={"pb-1"}>Filters:</h2>*/}
+                <div className={"mb-6 flex flex-wrap gap-2 sm:gap-4 p-2 "}>
+                    {FILTERS.map(filter => (
+                        <button
+                            key={filter}
+                            onClick={() => setActiveFilter(filter)}
+                            className={`px-2 py-1 sm:px-4 sm:py-2 text-sm sm:text-base rounded-lg transition-colors duration-200 ${
+                                activeFilter === filter
+                                    ? 'bg-gray-900 dark:bg-gray-100 text-white dark:text-gray-900'
+                                    : 'text-gray-900 dark:text-gray-100 hover:bg-gray-400 dark:hover:bg-gray-500 bg-gray-300 dark:bg-gray-800'
+                            }`}
+                        >
+                            {filter}
+                        </button>
+                    ))}
+                </div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-x-4 gap-y-6 items-start">
@@ -62,6 +62,6 @@ export function Projects({projects}: { projects: Project[] })
                     <ProjectCard key={project.slug} project={project}/>
                 ))}
             </div>
-        </>
+        </div>
     );
 }

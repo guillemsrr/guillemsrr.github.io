@@ -17,7 +17,7 @@ export function Navbar()
 
     return (
         <nav className="w-full">
-            <div className="flex flex-row flex-wrap items-center justify-center md:justify-start">
+            <div className={"flex flex-row flex-wrap items-center justify-center md:justify-start"}>
                 {links.map(({href, label}) =>
                 {
                     let isActive = pathname.includes(href);

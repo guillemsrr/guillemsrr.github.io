@@ -32,7 +32,7 @@ a.general-anchor:hover
 
 button.general-button:hover
 {
-    @apply bg-neutral-200 dark:bg-neutral-700 transition-colors;
+    @apply bg-neutral-300 dark:bg-neutral-700 transition-colors;
 }
 
 .anchor:hover

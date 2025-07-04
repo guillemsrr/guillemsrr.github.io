@@ -50,7 +50,7 @@ export async function ExperienceEntry({
 
     return (
         <div className={"prose mb-8 md:mb-10"}>
-            <div className={"grid grid-cols-1 md:grid-cols-1 md:gap-2 bg-neutral-100 dark:bg-neutral-700 px-4 md:px-8 md: pb-4 md:pb-8"}>
+            <div className={"grid grid-cols-1 md:grid-cols-1 md:gap-2 bg-white dark:bg-neutral-700 px-4 md:px-8 md: pb-4 md:pb-8"}>
                 <div>
                     <h1>{title} </h1>
                     {experience.tags && (

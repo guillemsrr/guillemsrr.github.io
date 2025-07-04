@@ -20,7 +20,7 @@ export async function DescriptionProject({
 
     return (
         <div className={"mb-8"}>
-            <div className={"grid grid-cols-1 md:grid-cols-2 md:gap-8 bg-neutral-200 dark:bg-neutral-700 md:px-2 md:py-4"}>
+            <div className={"grid grid-cols-1 md:grid-cols-2 md:gap-8 bg-white dark:bg-neutral-700 md:px-2 md:py-4"}>
                 <div className={"flex items-center"}>
                     <div className={"prose py-2 px-4 md:px-8"}>
                         <h2 className={"!mt-0"}>{project.title}</h2>

@@ -3,12 +3,13 @@ import Image from "next/image";
 
 export default function ExternalLinks()
 {
+    const anchorClass = "flex items-center p-1 md:p-2 rounded-lg general-anchor";
     return (
-        <div className={""}>
-            <ul className="font-sm flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-2">
+        <div className={"mt-2"}>
+            <ul className="font-sm flex flex-col sm:flex-row space-y-0 md:space-y-2">
                 <li>
                     <a
-                        className="flex items-center p-2 rounded-lg general-anchor"
+                        className={anchorClass}
                         rel="noopener noreferrer"
                         target="_blank"
                         href="https://github.com/guillemsrr"
@@ -21,7 +22,7 @@ export default function ExternalLinks()
                 </li>
                 <li>
                     <a
-                        className="flex items-center p-2 rounded-lg general-anchor"
+                        className={anchorClass}
                         rel="noopener noreferrer"
                         target="_blank"
                         href="https://guillem-serra.itch.io/"
@@ -38,7 +39,7 @@ export default function ExternalLinks()
                 </li>
                 <li>
                     <a
-                        className="flex items-center p-2 rounded-lg general-anchor"
+                        className={anchorClass}
                         rel="noopener noreferrer"
                         target="_blank"
                         href="https://www.behance.net/guillemserra"
@@ -56,7 +57,7 @@ export default function ExternalLinks()
                 </li>
                 <li>
                     <a
-                        className="flex items-center p-2 rounded-lg general-anchor"
+                        className={anchorClass}
                         rel="noopener noreferrer"
                         target="_blank"
                         href="https://www.linkedin.com/in/guillemserralorenz/"
