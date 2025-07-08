@@ -30,7 +30,7 @@ export default async function ProfessionalExperiencePage()
 
             />
             <ExperienceEntry
-                title="Procgen React developer"
+                title="React developer"
                 experienceSlug={"pluno"}
                 visual={<Image
                     alt="Generation image"
