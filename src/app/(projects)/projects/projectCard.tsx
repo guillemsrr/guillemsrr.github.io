@@ -11,14 +11,16 @@ export function ProjectCard({project}: { project: Project })
                 href={`/projects/${project.slug}`}
                 className="block rounded-lg overflow-hidden"
             >
-                <div className="relative h-52">
-                    <Image
-                        src={project.image}
-                        alt={project.title}
-                        fill
-                        className="object-cover"
-                    />
-                </div>
+                {project.image && (
+                    <div className="relative h-52">
+                        <Image
+                            src={project.image}
+                            alt={project.title}
+                            fill
+                            className="object-cover"
+                        />
+                    </div>
+                )}
 
                 <div className="p-4 pb-6 bg-white dark:bg-neutral-900">
                     <h2 className="text-xl font-semibold">{project.title}</h2>

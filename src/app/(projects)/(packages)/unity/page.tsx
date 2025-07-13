@@ -7,9 +7,10 @@ export default async function UnityProjects()
             <div className={"prose mb-8"}>
                 <h1>Unity Development</h1>
                 <p>
-                    My first professional experiences in the video game industry are with Unity. I've built gameplay systems, 
+                    My first professional experiences in the video game industry are with Unity. I've built gameplay
+                    systems,
                     procedural generation tools, UI/UX architecture for both mobile and VR devices.
-                    Most of this portfolio work was developed in solo or small-team environments, 
+                    Most of this portfolio work was developed in solo or small-team environments,
                     with an emphasis on clean code, scalability, and experimenting with systems thinking through
                     personal projects and game jams.
                 </p>
@@ -23,6 +24,34 @@ export default async function UnityProjects()
                     mainly for game jams and procedural generation experiments.
                 </p>
             </div>
+            <DescriptionProject projectSlug="ats-scanner">
+                <div>
+                    <h3>
+                        {"Game jam for "} 
+                        <a href="https://www.levelup-gamedevhub.com/" target="_blank" rel="noopener noreferrer">
+                            Level Up
+                        </a>
+                    </h3>                    <p>
+                    I came up with the idea for <strong>ATS Scanner</strong> during the Level Up game jam, inspired
+                    by <em>Papers, Please</em> but with a twist: a laser-based mechanic to reveal information on
+                    fake, misleading, or suspicious résumés. The result is a satirical take on hiring processes and
+                    automated candidate filtering.
+                </p>
+                    <p>
+                        I handled the project solo, building it in Unity and scripting everything from procedural CV
+                        generation to scanning mechanics and localization. I designed a modular system
+                        using <code>ScriptableObjects</code> and localization tables, ensuring a flexible structure for
+                        mixing serious and absurd candidate profiles. I also implemented dynamic difficulty progression,
+                        responsive UI layout with TextMeshPro, and support for WebGL (playable directly on itch.io).
+                    </p>
+                    <p>
+                        This project let me explore unconventional UI/UX and narrative design while applying my
+                        programming experience to build a scalable, maintainable game, even under time
+                        constraints.
+                    </p>
+                </div>
+            </DescriptionProject>
+
             <DescriptionProject projectSlug="wfc-unity">
                 <div>
                     <h3>Procedural Generation experiment</h3>

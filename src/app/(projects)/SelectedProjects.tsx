@@ -11,7 +11,7 @@ export async function getSelectedProjects(projectNames: string[]): Promise<Proje
         .filter((p): p is Project => p !== null);
 }
 
-const selectedSlugs = ['snake', 'vgscript', 'wfc-godot'];
+const selectedSlugs = ['snake', 'ats-scanner', 'vgscript'];
 
 export default async function SelectedProjects()
 {
