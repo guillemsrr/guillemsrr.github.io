@@ -9,9 +9,9 @@ export function Navbar()
 
     const links = [
         {href: '/professional-experience', label: 'Professional Experience'},
+        {href: '/projects', label: 'All projects'},
         {href: '/unreal-engine', label: 'Unreal Engine'},
         {href: '/unity', label: 'Unity'},
-        {href: '/projects', label: 'All projects'},
         {href: '/about', label: 'About me'},
     ];
 
