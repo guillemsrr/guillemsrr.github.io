@@ -1,8 +1,8 @@
 ﻿---
-title: 'Raytracing (WIP)'
+title: 'Path tracing (WIP)'
 publishedAt: '2025-07-25'
-description: "Raytracing test"
-image: "/images/projects/raytracing/sphere_hit_normal.gif"
+description: "Simple raytracing test on the CPU"
+image: "/images/projects/raytracing/path_tracing_1.gif"
 tags: "SDL, OpenGL, C++"
 isOpenSourced: true
 ---
@@ -11,15 +11,27 @@ It's using [SerraEngine](https://github.com/guillemsrr/SerraEngine) my custom si
 to improve my skills in low-level programming.
 
 Following the book [RayTracing in one weekend](https://raytracing.github.io/books/RayTracingInOneWeekend.html)
-as well as The Cherno's [YouTube ray tracing series](https://youtu.be/gfW1Fhd9u9Q?si=FUIoSHL7A7SPaMHo)
+as well as The Cherno's [YouTube ray tracing series](https://youtu.be/gfW1Fhd9u9Q?si=FUIoSHL7A7SPaMHo) (superb, highly recommended!).
 
 [GitHub source (WIP)](https://github.com/guillemsrr/raytracing-audio)
 
-Simplified RGB screen:
+Started just with a simple RGB screen:
 ![RGB](/images/projects/raytracing/RGB_Screen.png)
 
-First sphere (Hello, Japanese Sphere!)
+First sphere (Hello, Japanese World!) (and transparent cube in the middle)
 ![First sphere](/images/projects/raytracing/first_sphere.png)
 
 First sphere shading using the hit normal:
-![Sphere normal hit sahding](/images/projects/raytracing/sphere_hit_normal.gif)
+![Sphere normal hit shading](/images/projects/raytracing/sphere_hit_normal.gif)
+
+Applying light shading to the sphere:
+![Sphere light shading](/images/projects/raytracing/light_shading.png)
+
+Adding reflections:
+![Sphere reflections](/images/projects/raytracing/reflections_1.png)
+
+From around 2fps on singlecore to 30fps on a Ryzen 9 5900X after multithreading and optimizations:
+![Performance improvement](/images/projects/raytracing/multithreading_debug_1.png)
+
+Path tracing with accumulation and debugging with Release mode instead of Debug: 350 FPS!
+![Path tracing with accumulation](/images/projects/raytracing/path_tracing_1.gif)

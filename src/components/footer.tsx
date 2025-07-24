@@ -9,7 +9,6 @@ export default function Footer()
                     © {new Date().getFullYear()} Guillem Serra. All rights reserved.
                 </p>
 
-
                 <div className={"flex items-center justify-center sm:justify-start general-anchor font-sm"}>
                     <a
                         className="flex items-center gap-1 hover:underline ml-4"
@@ -23,7 +22,6 @@ export default function Footer()
                         <p className="text-neutral-600 dark:text-neutral-300">made by me</p>
                     </a>
                 </div>
-
             </div>
         </footer>
     )
